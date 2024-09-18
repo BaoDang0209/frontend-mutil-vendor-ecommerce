@@ -23,6 +23,7 @@ import Wishlist from './components/dashboard/Wishlist';
 import OrderDetails from './components/dashboard/OrderDetails';
 import Chat from './components/dashboard/Chat';
 import ConfirmOrder from './pages/ConfirmOrder';
+import { TEInput, TERipple } from "tw-elements-react";
 
 function App() {
   const dispatch = useDispatch()
@@ -37,35 +38,7 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Register/>} />
-      <Route path='/shops' element={<Shops/>} />
-      <Route path='/card' element={<Card/>} />
-      <Route path='/shipping' element={<Shipping/>} />
-      <Route path='/payment' element={<Payment/>} />
-      <Route path='/products?' element={<CategoryShop/>} />
-      <Route path='/products/search?' element={<SearchProducts/>} />
-      <Route path='/product/details/:slug' element={<Details/>} /> 
-      <Route path='/order/confirm?' element={<ConfirmOrder/>} /> 
-
-      <Route path='/dashboard' element={<ProtectUser/>} >
-      <Route path='' element={<Dashboard/>} >        
-      <Route path='' element={<Index/>} />
-      <Route path='my-orders' element={<Orders/>} /> 
-      <Route path='change-password' element={<ChangePassword/>} /> 
-      <Route path='my-wishlist' element={<Wishlist/>} /> 
-      <Route path='order/details/:orderId' element={<OrderDetails/>} /> 
-      <Route path='chat' element={<Chat/>} /> 
-      <Route path='chat/:sellerId' element={<Chat/>} /> 
-       
-       </Route> 
-      </Route>
-      
-       
-
-
-
-
     </Routes>
-    
     </BrowserRouter>
   );
 }
