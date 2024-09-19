@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom'
 const Login = () => {
   return (
     <div className='relative w-full h-screen bg-zinc-900/90'>
+      <img className='absolute w-full h-full object-cover mix-blend-overlay z-0' src={loginImg} alt="/" />
+    
       <div className='flex justify-center items-center h-full'>
         <form className='max-w-[400px] w-full mx-auto bg-white p-8 relative z-10'>
           <h2 className='text-4xl font-bold text-center py-4'>WELCOME BACK!</h2>
@@ -46,6 +48,5 @@ const Login = () => {
     </div>
   );
 };
-
 
 export default Login;

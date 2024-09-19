@@ -9,6 +9,8 @@ import Shipping from './pages/Shipping';
 import Details from './pages/Details';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ProfilePage from './pages/ProfilePage';
+import EditProfile  from './pages/EditProfile';
 import { get_category } from './store/reducers/homeReducer';
 import { useDispatch} from 'react-redux';
 import CategoryShop from './pages/CategoryShop';
@@ -35,9 +37,11 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Home/>} />
+      {/* <Route path='/' element={<Home/>} /> */}
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Register/>} />
+      <Route path='/profile' element={<ProfilePage/>} />
+      <Route path="/edit-profile" element={<EditProfile />} />
     </Routes>
     </BrowserRouter>
   );
