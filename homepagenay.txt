@@ -1,0 +1,651 @@
+import React from 'react';
+
+const Home = () => {
+    return (
+         <div className="bg-white flex flex-row justify-center w-full">
+      <div className="bg-white overflow-hidden w-[1440px] h-[4329px] relative">
+        <div className="absolute w-[425px] h-[455px] top-[1814px] left-[516px] bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]">
+          <div className="absolute w-[425px] h-[455px] -top-0.5 -left-0.5 bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]" />
+          <div className="inline-flex items-center gap-[13px] absolute top-[362px] left-11">
+            <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-1-2.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-2-2.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-3-2.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-4-2.svg" />
+              <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="star-5-2.svg" />
+            </div>
+            <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
+              <span className="text-black">4.5/</span>
+              <span className="text-[#00000099]">5</span>
+            </p>
+          </div>
+          <div className="absolute w-[402px] h-[387px] top-[35px] -left-px">
+            <div className="relative w-[445px] h-[405px] -left-2.5">
+              <div className="absolute w-[445px] h-[405px] top-0 left-0">
+                <img
+                  className="w-[445px] h-[362px] top-[43px] absolute left-0 object-cover"
+                  alt="Untitled design"
+                  src="image.png"
+                />
+                <img className="absolute w-[81px] h-[60px] top-0 left-[3px]" alt="Rectangle" src="rectangle-15-2.svg" />
+                <div className="absolute top-[7px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
+                  New
+                </div>
+                <div className="absolute top-[295px] left-[54px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[19.4px] tracking-[0] leading-[26.8px] whitespace-nowrap">
+                  Sneakers shoe for man
+                </div>
+                <div className="top-[349px] left-[54px] whitespace-nowrap absolute [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
+                  4.999.000 VND
+                </div>
+                <div className="w-12 top-[338px] left-[357px] rounded-[24.23px] absolute h-12 bg-black" />
+                <img className="w-[13px] top-[356px] left-[375px] absolute h-[13px]" alt="Arrow" src="arrow-2-2.svg" />
+              </div>
+              <img className="w-[39px] top-0 left-[367px] absolute h-[39px]" alt="Favorite" src="favorite-2.png" />
+            </div>
+          </div>
+        </div>
+        <div className="absolute w-[1440px] h-[122px] top-[797px] left-0 bg-black">
+          <div className="absolute top-[19px] left-[182px] [font-family:'Alata-Regular',Helvetica] font-normal text-white text-5xl tracking-[0] leading-[73.9px] whitespace-nowrap">
+            Puma
+          </div>
+          <div className="absolute top-5 left-[394px] [font-family:'Alata-Regular',Helvetica] font-normal text-white text-5xl tracking-[0] leading-[73.9px] whitespace-nowrap">
+            Adidas
+          </div>
+          <div className="absolute top-[19px] left-[640px] [font-family:'Alata-Regular',Helvetica] font-normal text-white text-5xl tracking-[0] leading-[73.9px] whitespace-nowrap">
+            Nike
+          </div>
+          <div className="top-5 left-[816px] [font-family:'Alata-Regular',Helvetica] font-normal text-5xl leading-[73.9px] absolute text-white tracking-[0] whitespace-nowrap">
+            Converse
+          </div>
+          <div className="absolute top-5 left-[1128px] [font-family:'Alata-Regular',Helvetica] font-normal text-white text-5xl tracking-[0] leading-[73.9px] whitespace-nowrap">
+            Vans
+          </div>
+        </div>
+        <img className="absolute w-[1240px] h-px top-[1508px] left-[109px] object-cover" alt="Line" src="line-4.svg" />
+        <div className="absolute w-[1467px] h-[1095px] top-[3442px] left-[-115px]">
+          <div className="relative h-[1095px]">
+            <img
+              className="absolute w-[1326px] h-[277px] top-[610px] left-[115px]"
+              alt="Rectangle"
+              src="rectangle-1.svg"
+            />
+            <img
+              className="absolute w-[1240px] h-px top-[443px] left-[227px] object-cover"
+              alt="Line"
+              src="line-8.svg"
+            />
+            <div className="flex w-[1240px] items-center justify-between px-16 py-9 absolute top-0 left-[227px] bg-black rounded-[20px] overflow-hidden">
+              <p className="relative w-[551px] h-[94px] [font-family:'Roboto-Bold',Helvetica] font-bold text-white text-[40px] tracking-[0] leading-[45px]">
+                STAY UPTO DATE ABOUT OUR LATEST OFFERS
+              </p>
+              <div className="inline-flex flex-col items-start gap-3.5 relative flex-[0_0_auto]">
+                <div className="flex w-[349px] items-start gap-3 px-4 py-3 relative flex-[0_0_auto] bg-white rounded-[62px] overflow-hidden">
+                  <img className="relative w-6 h-6" alt="Frame" src="frame.svg" />
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000066] text-base tracking-[0] leading-[normal]">
+                    Enter your email address
+                  </div>
+                </div>
+                <div className="flex w-[349px] items-center justify-center gap-3 px-4 py-3 relative flex-[0_0_auto] bg-white rounded-[62px] overflow-hidden">
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-BoldItalic',Helvetica] font-bold italic text-black text-base tracking-[0] leading-[normal]">
+                    Subscribe to Newsletter
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex w-[1240px] items-start justify-between absolute top-56 left-[227px]">
+              <div className="inline-flex flex-col items-start gap-[35px] relative flex-[0_0_auto]">
+                <div className="inline-flex flex-col items-start gap-[25px] relative flex-[0_0_auto]">
+                  <div className="mt-[-1.00px] [font-family:'Roboto-Bold',Helvetica] font-bold text-[33.5px] whitespace-nowrap relative w-fit text-black tracking-[0] leading-[normal]">
+                    SHU
+                  </div>
+                  <p className="relative w-[248px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000099] text-sm tracking-[0] leading-[22px]">
+                    We have shoes that suits your style and which you’re proud to wear. From women to men.
+                  </p>
+                </div>
+                <div className="relative w-[148px] h-7">
+                  <div className="absolute w-7 h-7 top-0 left-0 bg-white rounded-[14px] border border-solid border-[#00000033]">
+                    <img
+                      className="absolute w-[11px] h-[9px] top-[9px] left-2"
+                      alt="Logo twitter"
+                      src="logo-twitter-2.png"
+                    />
+                  </div>
+                  <div className="absolute w-7 h-7 top-0 left-10 bg-black rounded-[14px]">
+                    <img
+                      className="absolute w-1.5 h-3 top-2 left-[11px]"
+                      alt="Logo fb simple"
+                      src="logo-fb-simple-2.png"
+                    />
+                  </div>
+                  <div className="absolute w-7 h-7 top-0 left-20 bg-white rounded-[14px] border border-solid border-[#00000033]">
+                    <img
+                      className="absolute w-3.5 h-3.5 top-1.5 left-1.5"
+                      alt="Logo instagram"
+                      src="logo-instagram-1.png"
+                    />
+                  </div>
+                  <div className="absolute w-7 h-7 top-0 left-[120px] bg-white rounded-[14px] border border-solid border-[#00000033]">
+                    <img
+                      className="absolute w-[13px] h-[13px] top-1.5 left-[7px]"
+                      alt="Logo github"
+                      src="logo-github-1.png"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="inline-flex flex-col items-start gap-[26px] relative flex-[0_0_auto]">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-BoldItalic',Helvetica] font-bold italic text-black text-base tracking-[3.00px] leading-[18px] whitespace-nowrap">
+                  COMPANY
+                </div>
+                <div className="relative w-fit [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000099] text-base tracking-[0] leading-[19px]">
+                  About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <br />
+                  <br />
+                  Features&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <br />
+                  <br />
+                  Works&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <br />
+                  <br />
+                  Career
+                </div>
+              </div>
+              <div className="inline-flex flex-col items-start gap-[26px] relative flex-[0_0_auto]">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-BoldItalic',Helvetica] font-bold italic text-black text-base tracking-[3.00px] leading-[18px] whitespace-nowrap">
+                  HELP
+                </div>
+                <p className="relative w-fit [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000099] text-base tracking-[0] leading-[19px]">
+                  Customer Support
+                  <br />
+                  <br />
+                  Delivery Details
+                  <br />
+                  <br />
+                  Terms &amp; Conditions
+                  <br />
+                  <br />
+                  Privacy Policy
+                </p>
+              </div>
+              <div className="inline-flex flex-col items-start gap-[26px] relative flex-[0_0_auto]">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-BoldItalic',Helvetica] font-bold italic text-black text-base tracking-[3.00px] leading-[18px] whitespace-nowrap">
+                  FAQ
+                </div>
+                <div className="relative w-[149px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000099] text-base tracking-[0] leading-[19px]">
+                  Account
+                  <br />
+                  <br />
+                  Manage Deliveries
+                  <br />
+                  <br />
+                  Orders
+                  <br />
+                  <br />
+                  Payments
+                </div>
+              </div>
+              <div className="inline-flex flex-col items-start gap-[26px] relative flex-[0_0_auto]">
+                <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-BoldItalic',Helvetica] font-bold italic text-black text-base tracking-[3.00px] leading-[18px] whitespace-nowrap">
+                  RESOURCES
+                </div>
+                <p className="relative w-fit [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000099] text-base tracking-[0] leading-[19px]">
+                  Free eBooks
+                  <br />
+                  <br />
+                  Development Tutorial
+                  <br />
+                  <br />
+                  How to - Blog
+                  <br />
+                  <br />
+                  Youtube Playlist
+                </p>
+              </div>
+            </div>
+            <img className="absolute w-[299px] h-12 top-[459px] left-[1177px]" alt="Frame" src="frame-53.svg" />
+          </div>
+        </div>
+        <div className="absolute w-[1440px] h-[796px] top-0 left-0">
+          <div className="absolute w-[1440px] h-[796px] top-0 left-0">
+            <header className="absolute w-[1440px] h-[100px] top-0 left-0 bg-white">
+              <div className="flex w-[1226px] items-center justify-center gap-10 relative top-[26px] left-[84px]">
+                <div className="[font-family:'Calistoga-Regular',Helvetica] font-normal text-[32px] relative w-fit text-black tracking-[0] leading-[normal]">
+                  SHU
+                </div>
+                <div className="inline-flex items-center gap-6 relative flex-[0_0_auto]">
+                  <div className="inline-flex items-center gap-1 relative flex-[0_0_auto]">
+                    <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-black text-base tracking-[0] leading-[normal]">
+                      Shop
+                    </div>
+                    <img className="relative w-4 h-4" alt="Frame" src="img/homepage/arrow-down-sign-to-navigate.png" />
+                  </div>
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-black text-base tracking-[0] leading-[normal]">
+                    On Sale
+                  </div>
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-black text-base tracking-[0] leading-[normal]">
+                    New Arrivals
+                  </div>
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-black text-base tracking-[0] leading-[normal]">
+                    Brands
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 px-4 py-3 relative flex-1 grow bg-[#efefef] rounded-[62px] overflow-hidden">
+                  <img className="relative w-6 h-6" alt="Frame" src="img/homepage/" />
+                  <div className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-[#00000066] text-base tracking-[0] leading-[normal]">
+                    Search for products...
+                  </div>
+                </div>
+                <div className="inline-flex items-start gap-3.5 relative flex-[0_0_auto]">
+                  <div className="relative w-[26.4px] h-[26.4px]">
+                    {/* <Heart className="!absolute !w-[22px] !h-[22px] !top-px !left-[3px]" /> */}
+                  </div>
+                  <img className="relative w-6 h-6" alt="Frame" src="frame-3.svg" />
+                  <div className="relative w-6 h-6">
+                    {/* <Vector className="!absolute !w-5 !h-5 !top-0.5 !left-0.5" /> */}
+                  </div>
+                </div>
+              </div>
+            </header>
+            <div className="absolute w-[741px] h-[711px] top-[85px] left-[699px] [background:linear-gradient(180deg,rgb(249.9,249.9,249.9)_0%,rgb(228.46,228.46,228.46)_100%)]" />
+            <img className="absolute w-[247px] h-[247px] top-[155px] left-[851px]" alt="Ellipse" src="ellipse-2.svg" />
+            <img className="absolute w-[247px] h-[247px] top-[317px] left-[1147px]" alt="Ellipse" src="ellipse-5.svg" />
+            <img className="absolute w-[247px] h-[247px] top-[431px] left-[904px]" alt="Ellipse" src="ellipse-6.svg" />
+            <img className="absolute w-[149px] h-[67px] top-[504px] left-[997px]" alt="Vector" src="vector-1.svg" />
+            <img className="absolute w-[231px] h-[107px] top-[539px] left-[1086px]" alt="Vector" src="vector-2.svg" />
+            <div className="absolute top-[365px] left-[440px] rotate-[-90.00deg] [font-family:'Poppins-ExtraBold',Helvetica] font-extrabold text-white text-[115.5px] tracking-[0] leading-[105.0px] whitespace-nowrap">
+              ULTIMATE
+            </div>
+            <img className="absolute w-[303px] h-28 top-[554px] left-[695px]" alt="Ellipse" src="ellipse-1.svg" />
+            <div className="absolute w-[26px] h-[92px] top-72 left-[842px]">
+              <div className="relative w-[35px] h-[95px] -left-2">
+                <img className="absolute w-[27px] h-[78px] top-4 left-0" alt="Vector" src="vector-4.svg" />
+                <div className="absolute w-[23px] h-[23px] top-0 left-[11px] rounded-[11.75px] [background:linear-gradient(180deg,rgb(255,255,255)_0%)]" />
+              </div>
+            </div>
+            <img
+              className="absolute w-[667px] h-[690px] top-[85px] left-[711px] object-cover"
+              alt="Untitled design"
+              src="untitled-design-109-1.png"
+            />
+            <img className="absolute w-[275px] h-[318px] top-[304px] left-[931px]" alt="Vector" src="vector-3.svg" />
+            <div className="absolute w-6 h-6 top-[300px] left-[1188px] rounded-xl [background:linear-gradient(180deg,rgb(255,255,255)_0%)]" />
+            <div className="absolute top-[609px] left-[916px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[30.4px] tracking-[0] leading-[27.6px] whitespace-nowrap">
+              Trendy Slick Pro
+            </div>
+            <div className="absolute top-[663px] left-[974px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#000000a6] text-[27.2px] tracking-[0] leading-[24.7px] whitespace-nowrap">
+              15.000.000 Vnd
+            </div>
+            <p className="absolute w-[461px] top-[139px] left-40 [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-black text-[78.4px] tracking-[0] leading-[87.8px]">
+              Find Your Sole Mate With Us
+            </p>
+            <p className="absolute w-[461px] top-[445px] left-40 [font-family:'Poppins-Regular',Helvetica] font-normal text-[#000000bf] text-2xl tracking-[0] leading-[37.0px]">
+              Money Is King Not Customer <br />
+              ☆*: .｡. O(≧▽≦)o .｡.:*☆
+            </p>
+          </div>
+          <div className="absolute w-[196px] h-[70px] top-[568px] left-[162px]">
+            <div className="relative w-[194px] h-[70px] bg-black shadow-[0px_1.85px_1.58px_#00000005,0px_4.31px_3.66px_#00000007,0px_7.74px_6.58px_#00000008,0px_12.85px_10.92px_#0000000a,0px_21.16px_17.99px_#0000000b,0px_36.99px_31.44px_#0000000d,0px_80px_68px_#00000012]">
+              <div className="absolute top-[18px] left-10 [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-white text-[22.4px] tracking-[0] leading-[34.5px] whitespace-nowrap">
+                Shop Now
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute top-[1524px] left-[605px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[42.8px] tracking-[0] leading-[59.0px] whitespace-nowrap">
+          Best Selling
+        </div>
+        <img className="absolute w-[39px] h-[3px] top-[1555px] left-[534px]" alt="Line" src="line-6.svg" />
+        <img className="absolute w-[39px] h-[3px] top-[1555px] left-[855px]" alt="Line" src="line-5.svg" />
+        <div className="absolute w-[168px] h-[75px] top-[1646px] left-[427px] bg-black">
+          <div className="top-[18px] left-[59px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[26.6px] leading-[36.7px] absolute text-white tracking-[0] whitespace-nowrap">
+            Man
+          </div>
+        </div>
+        <div className="absolute w-[180px] h-[75px] top-[1646px] left-[651px] border-[1.9px] border-solid border-[#000000bf]">
+          <div className="absolute top-4 left-[34px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#000000bf] text-[26.6px] tracking-[0] leading-[36.7px] whitespace-nowrap">
+            Woman
+          </div>
+        </div>
+        <div className="absolute w-[177px] h-[75px] top-[1646px] left-[887px] border-[1.9px] border-solid border-[#000000bf]">
+          <div className="absolute top-4 left-[43px] [font-family:'Poppins-Medium',Helvetica] font-medium text-[#000000bf] text-[26.6px] tracking-[0] leading-[36.7px] whitespace-nowrap">
+            Unisex
+          </div>
+        </div>
+        <div className="absolute w-[408px] h-[455px] top-[1814px] left-[67px]">
+          <div className="relative w-[422px] h-[455px] left-[-9px]">
+            <div className="absolute w-[402px] h-[455px] top-0 left-[9px] bg-white rounded-[15.3px] border-[1.53px] border-solid border-[#dedede]" />
+            <img
+              className="w-[422px] h-[354px] top-[78px] absolute left-0 object-cover"
+              alt="Untitled design"
+              src="untitled-design-108-1.png"
+            />
+            <img className="absolute w-[77px] h-[59px] top-[35px] left-0.5" alt="Rectangle" src="rectangle-15.svg" />
+            <img className="w-[37px] top-[35px] left-[347px] absolute h-[39px]" alt="Favorite" src="favorite.png" />
+            <div className="absolute w-[33px] top-[42px] left-[18px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[13.8px] tracking-[0] leading-[19.0px] whitespace-nowrap">
+              New
+            </div>
+            <div className="absolute w-[179px] top-[330px] left-[51px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[18.4px] tracking-[0] leading-[25.4px] whitespace-nowrap">
+              Slick running shoes
+            </div>
+            <div className="w-[190px] top-[397px] left-[51px] absolute [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
+              4.999.000 VND
+            </div>
+            <div className="w-[46px] top-[373px] left-[338px] rounded-[22.95px/24.23px] absolute h-12 bg-black" />
+            <img className="w-3 top-[391px] left-[355px] absolute h-[13px]" alt="Arrow" src="arrow-2.svg" />
+            <div className="flex w-[150px] h-5 items-center gap-[13px] absolute top-[367px] left-[51px]">
+              <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-1.svg" />
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-2.svg" />
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-3.svg" />
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-4.svg" />
+                <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="star-5.svg" />
+              </div>
+              <p className="relative w-fit mt-[-0.47px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
+                <span className="text-black">4.5/</span>
+                <span className="text-[#00000099]">5</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="absolute w-[1321px] h-[455px] top-[2325px] left-[69px]">
+          <div className="absolute w-[431px] h-[455px] top-0 left-0">
+            <div className="absolute w-[431px] h-[455px] top-0 left-0">
+              <div className="relative w-[445px] h-[455px] -left-2.5">
+                <div className="absolute w-[425px] h-[455px] top-0 left-2.5 bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]" />
+                <img
+                  className="absolute w-[445px] h-[362px] top-[78px] left-0 object-cover"
+                  alt="Untitled design"
+                  src="untitled-design-108-1-2.png"
+                />
+                <img
+                  className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
+                  alt="Rectangle"
+                  src="rectangle-15-3.svg"
+                />
+                <img
+                  className="w-[39px] top-[35px] left-[367px] absolute h-[39px]"
+                  alt="Favorite"
+                  src="favorite-3.png"
+                />
+                <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
+                  New
+                </div>
+                <div className="absolute top-[330px] left-[54px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[19.4px] tracking-[0] leading-[26.8px] whitespace-nowrap">
+                  Slick running shoes
+                </div>
+                <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
+                  4.999.000 VND
+                </div>
+                <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
+                <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="arrow-2-3.svg" />
+              </div>
+            </div>
+            <div className="top-[363px] left-11 inline-flex items-center gap-[13px] absolute">
+              <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-1-5.svg" />
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-2-5.svg" />
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-3-5.svg" />
+                <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-4-5.svg" />
+                <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="star-5-5.svg" />
+              </div>
+              <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
+                <span className="text-black">4.5/</span>
+                <span className="text-[#00000099]">5</span>
+              </p>
+            </div>
+          </div>
+          <div className="absolute w-[431px] h-[455px] top-0 left-[448px]">
+            <div className="relative w-[445px] h-[455px] -left-2.5">
+              <div className="absolute w-[425px] h-[455px] top-0 left-2.5 bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]" />
+              <img
+                className="absolute w-[445px] h-[362px] top-[78px] left-0 object-cover"
+                alt="Untitled design"
+                src="untitled-design-108-1-3.png"
+              />
+              <img
+                className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
+                alt="Rectangle"
+                src="rectangle-15-4.svg"
+              />
+              <img className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite" src="favorite-4.png" />
+              <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
+                New
+              </div>
+              <p className="absolute top-[330px] left-[54px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[19.4px] tracking-[0] leading-[26.8px] whitespace-nowrap">
+                Formal canvas shoe for man
+              </p>
+              <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
+                4.999.000 VND
+              </div>
+              <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
+              <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="arrow-2-4.svg" />
+              <div className="top-[361px] left-[55px] inline-flex items-center gap-[13px] absolute">
+                <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-1-3.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-2-3.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-3-3.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-4-3.svg" />
+                  <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="star-5-3.svg" />
+                </div>
+                <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
+                  <span className="text-black">4.5/</span>
+                  <span className="text-[#00000099]">5</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="absolute w-[431px] h-[455px] top-0 left-[896px]">
+            <div className="relative w-[445px] h-[455px] -left-2.5">
+              <div className="absolute w-[425px] h-[455px] top-0 left-2.5 bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]" />
+              <img
+                className="absolute w-[445px] h-[362px] top-[78px] left-0 object-cover"
+                alt="Untitled design"
+                src="untitled-design-108-1-4.png"
+              />
+              <img
+                className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
+                alt="Rectangle"
+                src="rectangle-15-5.svg"
+              />
+              <img className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite" src="favorite-5.png" />
+              <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
+                New
+              </div>
+              <p className="absolute top-[330px] left-[54px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[19.4px] tracking-[0] leading-[26.8px] whitespace-nowrap">
+                Formal Slick shoe for man
+              </p>
+              <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
+                4.999.000 VND
+              </div>
+              <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
+              <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="arrow-2-5.svg" />
+              <div className="top-[363px] left-[55px] inline-flex items-center gap-[13px] absolute">
+                <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-1-4.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-2-4.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-3-4.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-4-4.svg" />
+                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-5-4.svg" />
+                </div>
+                <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
+                  <span className="text-black">5/</span>
+                  <span className="text-[#00000099]">5</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute w-[433px] h-[455px] top-[1816px] left-[965px]">
+          <div className="relative w-[445px] h-[455px] -left-2.5">
+            <div className="absolute w-[425px] h-[455px] top-0 left-2.5 bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]" />
+            <img
+              className="absolute w-[445px] h-[362px] top-[78px] left-0 object-cover"
+              alt="Untitled design"
+              src="untitled-design-108-1-5.png"
+            />
+            <img
+              className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
+              alt="Rectangle"
+              src="rectangle-15-6.svg"
+            />
+            <img className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite" src="favorite-6.png" />
+            <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
+              New
+            </div>
+            <div className="absolute top-[330px] left-[54px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[19.4px] tracking-[0] leading-[26.8px] whitespace-nowrap">
+              Slick Sneakers shoe
+            </div>
+            <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
+              4.999.000 VND
+            </div>
+            <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
+            <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="arrow-2-6.svg" />
+            <div className="inline-flex items-start gap-[5.31px] absolute top-[363px] left-[55px]">
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-1-6.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-2-6.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-3-6.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-4-6.svg" />
+              <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="star-5-6.svg" />
+            </div>
+            <p className="absolute top-[363px] left-[181px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
+              <span className="text-black">5/</span>
+              <span className="text-[#00000099]">5</span>
+            </p>
+          </div>
+        </div>
+        <div className="absolute w-[186px] h-[74px] top-[1290px] left-8 bg-black shadow-[0px_2.04px_1.73px_#00000005,0px_4.74px_4.03px_#00000007,0px_8.51px_7.24px_#00000008,0px_14.13px_12.01px_#0000000a,0px_23.28px_19.79px_#0000000b,0px_40.69px_34.58px_#0000000d,0px_88px_74.8px_#00000012]">
+          <div className="absolute w-[97px] top-4 left-[45px] [font-family:'Poppins-SemiBold',Helvetica] font-semibold text-white text-[24.6px] tracking-[0] leading-[37.9px] whitespace-nowrap">
+            Explore
+          </div>
+        </div>
+        <p className="absolute w-[279px] top-[1209px] left-8 [font-family:'Poppins-Medium',Helvetica] font-medium text-[#000000bf] text-[15.8px] tracking-[0] leading-[normal]">
+          Catch Up With Trends Quickly To Become A Trend
+        </p>
+        <div className="absolute w-[287px] top-[1088px] left-8 [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[39.6px] tracking-[0] leading-[54.7px]">
+          Most Popular <br />
+          products
+        </div>
+        <div className="absolute w-[222px] top-[1049px] left-[90px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[21.1px] tracking-[0] leading-[normal]">
+          Our Trending Shoes
+        </div>
+        <img className="absolute w-[45px] h-[3px] top-[1066px] left-[35px]" alt="Line" src="line-3.svg" />
+        <div className="absolute w-[1033px] h-[421px] top-[998px] left-[407px]">
+          <div className="absolute w-72 h-[332px] top-[41px] left-[45px] bg-[#d9d9d926] rounded-[11.44px] border-[0.88px] border-solid border-[#dedede]" />
+          <div className="absolute w-72 h-[332px] top-[41px] left-[380px] bg-[#d9d9d926] rounded-[11.44px] border-[0.88px] border-solid border-[#dedede]" />
+          <div className="absolute w-72 h-[332px] top-[41px] left-[713px] bg-[#d9d9d926] rounded-[11.44px] border-[0.88px] border-solid border-[#dedede]" />
+          <img
+            className="w-[372px] h-[397px] top-3 left-[338px] absolute object-cover"
+            alt="Untitled design"
+            src="untitled-design-111.png"
+          />
+          <img
+            className="w-[369px] h-[421px] top-0 left-[664px] absolute object-cover"
+            alt="Untitled design"
+            src="untitled-design-110.png"
+          />
+          <img
+            className="w-[379px] h-[401px] top-2.5 left-0 absolute object-cover"
+            alt="Untitled design"
+            src="untitled-design-114.png"
+          />
+          <div className="absolute w-[209px] top-[257px] left-[81px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[18.5px] tracking-[0] leading-[normal]">
+            Running canvas shoes
+          </div>
+          <div className="absolute w-[204px] top-[257px] left-[415px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[18.5px] tracking-[0] leading-[normal]">
+            Running casual shoes
+          </div>
+          <div className="absolute w-[166px] top-[257px] left-[748px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[18.5px] tracking-[0] leading-[normal]">
+            casual nike shoes
+          </div>
+          <div className="w-[142px] top-[305px] left-20 absolute [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
+            4.999.000 VND
+          </div>
+          <div className="absolute w-[142px] top-[305px] left-[748px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
+            7.399.000 VND
+          </div>
+          <div className="absolute w-[142px] top-[305px] left-[406px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
+            1.199.000 VND
+          </div>
+          <img className="left-[267px] absolute w-8 h-8 top-[301px]" alt="Exclude" src="exclude.svg" />
+          <img className="left-[601px] absolute w-8 h-8 top-[301px]" alt="Exclude" src="exclude-2.svg" />
+          <img className="left-[935px] absolute w-8 h-8 top-[301px]" alt="Exclude" src="exclude-3.svg" />
+        </div>
+        <img
+          className="top-[1191px] left-[365px] absolute w-[30px] h-[30px] object-cover"
+          alt="Arrow down"
+          src="arrow-down-1.png"
+        />
+        <img
+          className="top-[3432px] left-[6181px] absolute w-[30px] h-[30px] object-cover"
+          alt="Arrow down"
+          src="arrow-down-2.png"
+        />
+        <div className="absolute w-3 h-[11px] top-[1427px] left-[886px] bg-[#000000bf] rounded-[6.05px/5.5px]" />
+        <div className="absolute w-[11px] h-[11px] top-[1427px] left-[944px] bg-[#000000bf] rounded-[5.5px]" />
+        <div className="absolute w-[11px] h-[11px] top-[1427px] left-[965px] bg-[#00000080] rounded-[5.5px]" />
+        <div className="absolute w-[29px] h-[11px] top-[1427px] left-[906px] bg-black rounded-[32.56px]" />
+        <div className="absolute top-[2867px] left-[550px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[38.7px] tracking-[0] leading-[53.4px] whitespace-nowrap">
+          Client Testimonial
+        </div>
+        <img className="absolute w-[35px] h-[3px] top-[2895px] left-[450px]" alt="Line" src="line-8-2.svg" />
+        <img className="absolute w-[35px] h-[3px] top-[2895px] left-[940px]" alt="Line" src="line-7.svg" />
+        <div className="absolute w-[688px] h-[378px] top-[3017px] left-0">
+          <div className="absolute w-[682px] h-[378px] top-0 left-0">
+            <div className="absolute w-[642px] h-[291px] top-0 left-10 bg-[#efefef] rounded-[17.2px] border-[1.72px] border-solid border-[#d6d6d6]" />
+            <div className="absolute top-[67px] left-[243px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[24.1px] tracking-[0] leading-[33.3px] whitespace-nowrap">
+              Meythli Odex
+            </div>
+            <img
+              className="absolute w-[251px] h-[310px] top-[68px] left-[21px] object-cover"
+              alt="Unsplash ikxcu"
+              src="unsplash-rzc98-ikxcu.png"
+            />
+            <img className="absolute w-5 h-[19px] top-[101px] left-[244px]" alt="Star" src="star-1-7.svg" />
+            <img className="absolute w-5 h-[19px] top-[101px] left-[269px]" alt="Star" src="star-2-7.svg" />
+            <img className="absolute w-5 h-[19px] top-[101px] left-[294px]" alt="Star" src="star-3-7.svg" />
+            <img className="absolute w-5 h-[19px] top-[101px] left-[319px]" alt="Star" src="star-4-7.svg" />
+            <img className="absolute w-2.5 h-[19px] top-[101px] left-[344px]" alt="Star" src="star-5-7.svg" />
+            <p className="absolute w-[403px] top-[157px] left-[243px] [font-family:'Poppins-Regular',Helvetica] font-normal text-black text-[15.5px] tracking-[0] leading-[21.4px]">
+              Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et
+              Dolore Magna Aliqua.
+            </p>
+            <img className="left-[588px] absolute w-[34px] h-[34px] top-[68px]" alt="Pan zoom" src="pan-zoom.png" />
+            <img className="w-6 top-[131px] left-0 absolute h-[30px]" alt="Arrow back ios" src="arrow-back-ios.png" />
+          </div>
+          <div className="absolute w-[9px] h-[9px] top-[339px] left-[679px] bg-[#000000a6] rounded-[4.3px/4.73px]" />
+        </div>
+        <div className="absolute w-[663px] h-[378px] top-[3017px] left-[720px]">
+          <div className="absolute w-[642px] h-[291px] top-0 left-[22px] bg-[#efefef] rounded-[17.2px] border-[1.72px] border-solid border-[#d6d6d6]" />
+          <div className="absolute top-[67px] left-56 [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[24.1px] tracking-[0] leading-[33.3px] whitespace-nowrap">
+            Meythli Odex
+          </div>
+          <img
+            className="absolute w-[251px] h-[310px] top-[68px] left-0.5 object-cover"
+            alt="Unsplash ikxcu"
+            src="unsplash-rzc98-ikxcu-2.png"
+          />
+          <img className="absolute w-5 h-[19px] top-[101px] left-[225px]" alt="Star" src="star-6.svg" />
+          <img className="absolute w-5 h-[19px] top-[101px] left-[250px]" alt="Star" src="star-7.svg" />
+          <img className="absolute w-5 h-[19px] top-[101px] left-[275px]" alt="Star" src="star-8.svg" />
+          <img className="absolute w-5 h-[19px] top-[101px] left-[300px]" alt="Star" src="star-9.svg" />
+          <img className="absolute w-2.5 h-[19px] top-[101px] left-[325px]" alt="Star" src="star-10.svg" />
+          <p className="absolute w-[403px] top-[157px] left-56 [font-family:'Poppins-Regular',Helvetica] font-normal text-black text-[15.5px] tracking-[0] leading-[21.4px]">
+            Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et
+            Dolore Magna Aliqua.
+          </p>
+          <img className="left-[569px] absolute w-[34px] h-[34px] top-[68px]" alt="Pan zoom" src="pan-zoom-2.png" />
+          <div className="absolute w-[9px] h-[9px] top-[339px] left-0 bg-[#000000a6] rounded-[4.3px/4.73px]" />
+          <div className="absolute w-[9px] h-[9px] top-[339px] left-[18px] bg-[#00000066] rounded-[4.3px/4.73px]" />
+        </div>
+        <img
+          className="w-[30px] top-[3148px] left-[1400px] absolute h-[30px]"
+          alt="Arrow back ios"
+          src="arrow-back-ios-2.png"
+        />
+        <div className="absolute w-[13px] h-[13px] top-[3354px] left-[697px] bg-[#000000bf] rounded-[6.45px]" />
+      </div>
+    </div>
+    );
+};
+
+export default Home;

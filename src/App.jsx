@@ -26,9 +26,9 @@ import ConfirmOrder from './pages/ConfirmOrder';
 
 function App() {
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(get_category()) 
-},[])
+//   useEffect(() => {
+//     dispatch(get_category())  
+// },[])
 
 
   return (
@@ -43,7 +43,8 @@ function App() {
       <Route path='/payment' element={<Payment/>} />
       <Route path='/products?' element={<CategoryShop/>} />
       <Route path='/products/search?' element={<SearchProducts/>} />
-      <Route path='/product/details/:slug' element={<Details/>} /> 
+      {/* <Route path='/product/details/:slug' element={<Details/>} />  */}
+      <Route path='/details' element={<Details/>} /> 
       <Route path='/order/confirm?' element={<ConfirmOrder/>} /> 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
