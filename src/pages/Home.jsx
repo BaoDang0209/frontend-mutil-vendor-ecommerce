@@ -1,6 +1,14 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import { BsArrowUpRightCircleFill } from "react-icons/bs";
+import { CgHeart } from "react-icons/cg";
+import Rating from '../components/Rating'; 
+
+
 const Home = () => {
   return (
     <div>
@@ -15,11 +23,7 @@ const Home = () => {
               <div className="absolute w-[425px] h-[455px] -top-0.5 -left-0.5 bg-white rounded-[16.15px] border-[1.62px] border-solid border-[#dedede]" />
               <div className="inline-flex items-center gap-[13px] absolute top-[362px] left-11">
                 <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-1.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-2.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-3.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-4.svg" />
-                  <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="/img/homepage/star-5.svg" />
+                <Rating />
                 </div>
                 <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
                   <span className="text-black">4.5/</span>
@@ -34,7 +38,7 @@ const Home = () => {
                       alt="Untitled design"
                       src="/img/homepage/shoe2.png"
                     />
-                    <img className="absolute w-[81px] h-[60px] top-0 left-[3px]" alt="Rectangle" src="/img/homepage/rectangle-15.svg" />
+                    <img className="absolute w-[81px] h-[60px] top-0 left-[3px]" alt="Rectangle" src="./img/homepage/rectangle-15.svg" />
                     <div className="absolute top-[7px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
                       New
                     </div>
@@ -44,10 +48,9 @@ const Home = () => {
                     <div className="top-[349px] left-[54px] whitespace-nowrap absolute [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
                       4.999.000 VND
                     </div>
-                    <div className="w-12 top-[338px] left-[357px] rounded-[24.23px] absolute h-12 bg-black" />
-                    <img className="w-[13px] top-[356px] left-[375px] absolute h-[13px]" alt="Arrow" src="/img/homepage/arrow-2.svg" />
+                    <BsArrowUpRightCircleFill className="w-12 top-[338px] left-[357px] rounded-[24.23px] absolute h-12" alt="Arrow" />
                   </div>
-                  <img className="w-[39px] top-0 left-[367px] absolute h-[39px]" alt="Favorite" src="/img/homepage/favorite.svg" />
+                  <CgHeart className="w-[39px] top-0 left-[367px] absolute h-[39px]" alt="Favorite"/>
                 </div>
               </div>
             </div>
@@ -146,8 +149,8 @@ const Home = () => {
                   alt="Untitled design"
                   src="/img/homepage/shoe4.png"
                 />
-                <img className="absolute w-[77px] h-[59px] top-[35px] left-0.5" alt="Rectangle" src="/img/homepage/rectangle-15.svg" />
-                <img className="w-[37px] top-[35px] left-[347px] absolute h-[39px]" alt="Favorite" src="/img/homepage/favorite.svg" />
+                <img className="absolute w-[77px] h-[59px] top-[35px] left-0.5" alt="Rectangle" src="./img/homepage/rectangle-15.svg" />
+                <CgHeart className="w-[37px] top-[35px] left-[347px] absolute h-[39px]" alt="Favorite"  />
                 <div className="absolute w-[33px] top-[42px] left-[18px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[13.8px] tracking-[0] leading-[19.0px] whitespace-nowrap">
                   New
                 </div>
@@ -157,15 +160,10 @@ const Home = () => {
                 <div className="w-[190px] top-[397px] left-[51px] absolute [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
                   4.999.000 VND
                 </div>
-                <div className="w-[46px] top-[373px] left-[338px] rounded-[22.95px/24.23px] absolute h-12 bg-black" />
-                <img className="w-3 top-[391px] left-[355px] absolute h-[13px]" alt="Arrow" src="/img/homepage/arrow-2.svg" />
+                <BsArrowUpRightCircleFill className="w-[46px] top-[373px] left-[338px] rounded-[22.95px/24.23px] absolute h-12" alt="Arrow" />
                 <div className="flex w-[150px] h-5 items-center gap-[13px] absolute top-[367px] left-[51px]">
                   <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-1.svg" />
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-2.svg" />
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-3.svg" />
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-4.svg" />
-                    <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="/img/homepage/star-5.svg" />
+                  <Rating />
                   </div>
                   <p className="relative w-fit mt-[-0.47px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
                     <span className="text-black">4.5/</span>
@@ -187,12 +185,12 @@ const Home = () => {
                     <img
                       className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
                       alt="Rectangle"
-                      src="/img/homepage/rectangle-15.svg"
+                      src="./img/homepage/rectangle-15.svg"
                     />
-                    <img
+                    <CgHeart
                       className="w-[39px] top-[35px] left-[367px] absolute h-[39px]"
                       alt="Favorite"
-                      src="/img/homepage/favorite.svg"
+                       
                     />
                     <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
                       New
@@ -203,17 +201,12 @@ const Home = () => {
                     <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
                       4.999.000 VND
                     </div>
-                    <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
-                    <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="/img/homepage/arrow-2.svg" />
+                    <BsArrowUpRightCircleFill className="absolute w-12 h-12 top-[373px] left-[357px]" alt="Arrow" />
                   </div>
                 </div>
                 <div className="top-[363px] left-11 inline-flex items-center gap-[13px] absolute">
                   <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-1.svg" />
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-2.svg" />
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-3.svg" />
-                    <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-4.svg" />
-                    <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="/img/homepage/star-5.svg" />
+                  <Rating />
                   </div>
                   <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
                     <span className="text-black">4.5/</span>
@@ -232,9 +225,9 @@ const Home = () => {
                   <img
                     className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
                     alt="Rectangle"
-                    src="/img/homepage/rectangle-15.svg"
+                    src="./img/homepage/rectangle-15.svg"
                   />
-                  <img className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite" src="/img/homepage/favorite.svg" />
+                  <CgHeart className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite"   />
                   <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
                     New
                   </div>
@@ -244,15 +237,10 @@ const Home = () => {
                   <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
                     4.999.000 VND
                   </div>
-                  <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
-                  <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="/img/homepage/arrow-2.svg" />
+                  <BsArrowUpRightCircleFill className="absolute w-12 h-12 top-[373px] left-[357px]  rounded-[24.23px]" alt="Arrow" />
                   <div className="top-[361px] left-[55px] inline-flex items-center gap-[13px] absolute">
                     <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-1.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-2.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-3.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-4.svg" />
-                      <img className="relative w-[8.79px] h-[16.72px]" alt="Star" src="/img/homepage/star-5.svg" />
+                    <Rating />
                     </div>
                     <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
                       <span className="text-black">4.5/</span>
@@ -272,9 +260,9 @@ const Home = () => {
                   <img
                     className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
                     alt="Rectangle"
-                    src="/img/homepage/rectangle-15.svg"
+                    src="./img/homepage/rectangle-15.svg"
                   />
-                  <img className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite" src="/img/homepage/favorite.svg" />
+                  <CgHeart className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite"   />
                   <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
                     New
                   </div>
@@ -284,15 +272,10 @@ const Home = () => {
                   <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
                     4.999.000 VND
                   </div>
-                  <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
-                  <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="/img/homepage/arrow-2.svg" />
+                  <BsArrowUpRightCircleFill className="absolute w-12 h-12 top-[373px] left-[357px] rounded-[24.23px]" alt="Arrow" />
                   <div className="top-[363px] left-[55px] inline-flex items-center gap-[13px] absolute">
                     <div className="inline-flex items-start gap-[5.31px] relative flex-[0_0_auto]">
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-1.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-2.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-3.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-4.svg" />
-                      <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-5.svg" />
+                    <Rating />
                     </div>
                     <p className="relative w-fit mt-[-1.00px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
                       <span className="text-black">5/</span>
@@ -313,9 +296,9 @@ const Home = () => {
                 <img
                   className="absolute w-[81px] h-[60px] top-[35px] left-[3px]"
                   alt="Rectangle"
-                  src="/img/homepage/rectangle-15.svg"
+                  src="./img/homepage/rectangle-15.svg"
                 />
-                <img className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite" src="/img/homepage/favorite.svg" />
+                <CgHeart className="w-[39px] top-[35px] left-[367px] absolute h-[39px]" alt="Favorite"   />
                 <div className="absolute top-[42px] left-[19px] [font-family:'Poppins-Bold',Helvetica] font-bold text-white text-[14.5px] tracking-[0] leading-[20.1px] whitespace-nowrap">
                   New
                 </div>
@@ -325,14 +308,10 @@ const Home = () => {
                 <div className="absolute top-96 left-[54px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal] whitespace-nowrap">
                   4.999.000 VND
                 </div>
-                <div className="absolute w-12 h-12 top-[373px] left-[357px] bg-black rounded-[24.23px]" />
-                <img className="absolute w-[13px] h-[13px] top-[391px] left-[375px]" alt="Arrow" src="/img/homepage/arrow-2.svg" />
+
+                <BsArrowUpRightCircleFill className="absolute w-12 h-12 top-[373px] left-[357px] rounded-[24.23px]" alt="Arrow" />
                 <div className="inline-flex items-start gap-[5.31px] absolute top-[363px] left-[55px]">
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-1.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-2.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-3.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-4.svg" />
-                  <img className="relative w-[17.58px] h-[16.72px]" alt="Star" src="/img/homepage/star-5.svg" />
+                <Rating />
                 </div>
                 <p className="absolute top-[363px] left-[181px] [font-family:'Open_Sans-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[normal]">
                   <span className="text-black">5/</span>
@@ -356,7 +335,7 @@ const Home = () => {
               Our Trending Shoes
             </div>
             <img className="absolute w-[45px] h-[3px] top-[1066px] left-[35px]" alt="Line" src="/img/homepage/line-3.svg" />
-            <div className="absolute w-[1033px] h-[421px] top-[998px] left-[407px]">
+            <div className="absolute w-[1033px] h-[421px] top-[998px] left-[395px]">
               <div className="absolute w-72 h-[332px] top-[41px] left-[45px] bg-[#d9d9d926] rounded-[11.44px] border-[0.88px] border-solid border-[#dedede]" />
               <div className="absolute w-72 h-[332px] top-[41px] left-[380px] bg-[#d9d9d926] rounded-[11.44px] border-[0.88px] border-solid border-[#dedede]" />
               <div className="absolute w-72 h-[332px] top-[41px] left-[713px] bg-[#d9d9d926] rounded-[11.44px] border-[0.88px] border-solid border-[#dedede]" />
@@ -393,19 +372,26 @@ const Home = () => {
               <div className="absolute w-[142px] top-[305px] left-[406px] [font-family:'Inter-Medium',Helvetica] font-medium text-black text-[17.6px] tracking-[0] leading-[normal]">
                 1.199.000 VND
               </div>
-              <img className="left-[267px] absolute w-8 h-8 top-[301px]" alt="Exclude" src="/img/homepage/exclude.svg" />
-              <img className="left-[601px] absolute w-8 h-8 top-[301px]" alt="Exclude" src="/img/homepage/exclude.svg" />
-              <img className="left-[935px] absolute w-8 h-8 top-[301px]" alt="Exclude" src="/img/homepage/exclude.svg" />
+              <BsArrowUpRightCircleFill
+                className="left-[267px] absolute w-8 h-8 top-[301px]"
+                alt="Arrow Up Right"
+              />
+              <BsArrowUpRightCircleFill
+                className="left-[601px] absolute w-8 h-8 top-[301px]"
+                alt="Arrow Up Right"
+              />
+              <BsArrowUpRightCircleFill
+                className="left-[935px] absolute w-8 h-8 top-[301px]"
+                alt="Arrow Up Right"
+              />
             </div>
-            <img
-              className="top-[1191px] left-[365px] absolute w-[30px] h-[30px] object-cover"
-              alt="Arrow down"
-              src="/img/homepage/arrow-down-1.png"
+            <IoIosArrowBack
+              className="top-[1191px] left-[390px] absolute w-[30px] h-[30px]"
+              alt="Arrow back"
             />
-            <img
-              className="top-[3432px] left-[6181px] absolute w-[30px] h-[30px] object-cover"
-              alt="Arrow down"
-              src="/img/homepage/arrow-down-1.png"
+            <IoIosArrowForward
+              className="top-[1191px] left-[1410px] absolute w-[30px] h-[30px]"
+              alt="Arrow forward"
             />
             <div className="absolute w-3 h-[11px] top-[1427px] left-[886px] bg-[#000000bf] rounded-[6.05px/5.5px]" />
             <div className="absolute w-[11px] h-[11px] top-[1427px] left-[944px] bg-[#000000bf] rounded-[5.5px]" />
@@ -427,16 +413,12 @@ const Home = () => {
                   alt="Unsplash ikxcu"
                   src="/img/homepage/unsplash-rzc98-ikxcu.png"
                 />
-                <img className="absolute w-5 h-[19px] top-[101px] left-[244px]" alt="Star" src="/img/homepage/star-1.svg" />
-                <img className="absolute w-5 h-[19px] top-[101px] left-[269px]" alt="Star" src="/img/homepage/star-2.svg" />
-                <img className="absolute w-5 h-[19px] top-[101px] left-[294px]" alt="Star" src="/img/homepage/star-3.svg" />
-                <img className="absolute w-5 h-[19px] top-[101px] left-[319px]" alt="Star" src="/img/homepage/star-4.svg" />
-                <img className="absolute w-2.5 h-[19px] top-[101px] left-[344px]" alt="Star" src="/img/homepage/star-5.svg" />
+                <Rating />
                 <p className="absolute w-[403px] top-[157px] left-[243px] [font-family:'Poppins-Regular',Helvetica] font-normal text-black text-[15.5px] tracking-[0] leading-[21.4px]">
                   Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et
                   Dolore Magna Aliqua.
                 </p>
-                <img className="w-6 top-[131px] left-0 absolute h-[30px]" alt="Arrow back ios" src="/img/homepage/arrow-left.svg" />
+                <IoIosArrowBack className="w-6 top-[131px] left-0 absolute h-[30px]" alt="Arrow back ios" />
               </div>
               <div className="absolute w-[9px] h-[9px] top-[339px] left-[679px] bg-[#000000a6] rounded-[4.3px/4.73px]" />
             </div>
@@ -450,11 +432,7 @@ const Home = () => {
                 alt="Unsplash ikxcu"
                 src="/img/homepage/unsplash-rzc98-ikxcu-2.png"
               />
-              <img className="absolute w-5 h-[19px] top-[101px] left-[225px]" alt="Star" src="/img/homepage/star-1.svg" />
-              <img className="absolute w-5 h-[19px] top-[101px] left-[250px]" alt="Star" src="/img/homepage/star-2.svg" />
-              <img className="absolute w-5 h-[19px] top-[101px] left-[275px]" alt="Star" src="/img/homepage/star-3.svg" />
-              <img className="absolute w-5 h-[19px] top-[101px] left-[300px]" alt="Star" src="/img/homepage/star-4.svg" />
-              <img className="absolute w-2.5 h-[19px] top-[101px] left-[325px]" alt="Star" src="/img/homepage/star-5.svg" />
+              <Rating />
               <p className="absolute w-[403px] top-[157px] left-56 [font-family:'Poppins-Regular',Helvetica] font-normal text-black text-[15.5px] tracking-[0] leading-[21.4px]">
                 Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et
                 Dolore Magna Aliqua.
@@ -462,10 +440,10 @@ const Home = () => {
               <div className="absolute w-[9px] h-[9px] top-[339px] left-0 bg-[#000000a6] rounded-[4.3px/4.73px]" />
               <div className="absolute w-[9px] h-[9px] top-[339px] left-[18px] bg-[#00000066] rounded-[4.3px/4.73px]" />
             </div>
-            <img
+            <IoIosArrowForward
               className="w-[30px] top-[3148px] left-[1400px] absolute h-[30px]"
               alt="Arrow back ios"
-              src="/img/homepage/right-arrow.svg"
+              
             />
             <div className="absolute w-[13px] h-[13px] top-[3354px] left-[697px] bg-[#000000bf] rounded-[6.45px]" />
           </div>
