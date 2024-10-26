@@ -1,7 +1,7 @@
 import {React,useState}     from 'react';
-import { FaStar } from 'react-icons/fa';
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import Rating from '../components/Rating';
+
 import { FaHeart } from 'react-icons/fa';
 const Categorys = () => {
     // Tạo state để lưu trạng thái màu của biểu tượng
@@ -53,13 +53,7 @@ const Categorys = () => {
             {/* Xếp hạng sản phẩm */}
             <div className="flex w-[103px] h-[13px] items-center gap-[9.05px] absolute top-[253px] left-[38px]">
                 <div className="inline-flex items-start gap-[3.7px] relative flex-[0_0_auto]">
-                    {[...Array(5)].map((_, index) => (
-                        <FaStar
-                            key={index}
-                            className="relative w-[12.24px] h-[11.64px]"
-                            style={{ color: 'gold' }}
-                        />
-                    ))}
+                    <Rating/>
                 </div>
                 <p className="relative w-fit mt-[-0.58px] [font-family:'Open_Sans',Helvetica] font-normal text-transparent text-[9.7px] tracking-[0] leading-[normal]">
                     <span className="text-black">5/</span>
