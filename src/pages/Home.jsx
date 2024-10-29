@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import Reviews from '../components/Reviews'
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
@@ -15,7 +15,7 @@ const Home = () => {
       <Header /> {/* Sử dụng component Header */}
 
       {/* Phần nội dung chính của trang Home */}
-      <main className="container mx-auto py-4">
+      <div className="bg-white flex flex-col items-center w-full"> {/* Thêm padding-top để tránh bị header che */}
         {/* Thêm nội dung trang chủ tại đây */}
         <div className="bg-white flex flex-row justify-center w-full">
           <div className="bg-white overflow-hidden w-[1440px] h-[4329px] relative">
@@ -402,48 +402,21 @@ const Home = () => {
             </div>
             <img className="absolute w-[35px] h-[3px] top-[2895px] left-[450px]" alt="Line" src="/img/homepage/line-3.svg" />
             <img className="absolute w-[35px] h-[3px] top-[2895px] left-[940px]" alt="Line" src="/img/homepage/line-3.svg" />
-            <div className="absolute w-[688px] h-[378px] top-[3017px] left-0">
-              <div className="absolute w-[682px] h-[378px] top-0 left-0">
-                <div className="absolute w-[642px] h-[291px] top-0 left-10 bg-[#efefef] rounded-[17.2px] border-[1.72px] border-solid border-[#d6d6d6]" />
-                <div className="absolute top-[67px] left-[243px] [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[24.1px] tracking-[0] leading-[33.3px] whitespace-nowrap">
-                  Meythli Odex
-                </div>
-                <img
-                  className="absolute w-[251px] h-[310px] top-[68px] left-[21px] object-cover"
-                  alt="Unsplash ikxcu"
-                  src="/img/homepage/unsplash-rzc98-ikxcu.png"
-                />
-                <Rating />
-                <p className="absolute w-[403px] top-[157px] left-[243px] [font-family:'Poppins-Regular',Helvetica] font-normal text-black text-[15.5px] tracking-[0] leading-[21.4px]">
-                  Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et
-                  Dolore Magna Aliqua.
-                </p>
-                <IoIosArrowBack className="w-6 top-[131px] left-0 absolute h-[30px]" alt="Arrow back ios" />
-              </div>
-              <div className="absolute w-[9px] h-[9px] top-[339px] left-[679px] bg-[#000000a6] rounded-[4.3px/4.73px]" />
-            </div>
             <div className="absolute w-[663px] h-[378px] top-[3017px] left-[720px]">
-              <div className="absolute w-[642px] h-[291px] top-0 left-[22px] bg-[#efefef] rounded-[17.2px] border-[1.72px] border-solid border-[#d6d6d6]" />
-              <div className="absolute top-[67px] left-56 [font-family:'Poppins-Medium',Helvetica] font-medium text-black text-[24.1px] tracking-[0] leading-[33.3px] whitespace-nowrap">
-                Meythli Odex
-              </div>
-              <img
-                className="absolute w-[251px] h-[310px] top-[68px] left-0.5 object-cover"
-                alt="Unsplash ikxcu"
-                src="/img/homepage/unsplash-rzc98-ikxcu-2.png"
-              />
-              <Rating />
-              <p className="absolute w-[403px] top-[157px] left-56 [font-family:'Poppins-Regular',Helvetica] font-normal text-black text-[15.5px] tracking-[0] leading-[21.4px]">
-                Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et
-                Dolore Magna Aliqua.
-              </p>
-              <div className="absolute w-[9px] h-[9px] top-[339px] left-0 bg-[#000000a6] rounded-[4.3px/4.73px]" />
-              <div className="absolute w-[9px] h-[9px] top-[339px] left-[18px] bg-[#00000066] rounded-[4.3px/4.73px]" />
+              <Reviews/>
+              
+            </div>
+            <div className="absolute w-[663px] h-[378px] top-[3017px] left-[100px]">
+              <Reviews/>
             </div>
             <IoIosArrowForward
               className="w-[30px] top-[3148px] left-[1400px] absolute h-[30px]"
               alt="Arrow back ios"
               
+            />
+            <IoIosArrowBack
+              className="w-[30px] top-[3148px] left-[21px] absolute h-[30px]"
+              alt="Arrow back"
             />
             <div className="absolute w-[13px] h-[13px] top-[3354px] left-[697px] bg-[#000000bf] rounded-[6.45px]" />
           </div>
@@ -452,9 +425,12 @@ const Home = () => {
 
 
         {/* Thêm nội dung khác như danh sách sản phẩm, banner, v.v. */}
-      </main>
-
-      <Footer /> {/* Sử dụng component Footer */}
+        
+      </div>
+      
+      <div className="w-full mt-[20px]"> 
+          <Footer /> {/* Sử dụng component Footer */}
+        </div>
     </div>
   );
 };

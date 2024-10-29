@@ -4,8 +4,10 @@ import Footer from '../components/Footer';
 import Buy from "../components/Buy";
 import { FaTag } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+    const navigate = useNavigate();
     const initialPrice = 2999000; // Giá của một sản phẩm
     const [subtotal, setSubtotal] = useState(initialPrice); // Subtotal ban đầu
     const discount = 0.1; // Giảm giá 10%
@@ -46,6 +48,17 @@ const Cart = () => {
     // Tính tổng với giảm giá và phí vận chuyển
     const total = subtotal * (1 - discount) + deliveryFee;
 
+    // Hàm điều hướng đến trang xác nhận
+    const handleCheckout = () => {
+        navigate('/order', {
+            state: {
+                subtotal: subtotal,
+                discount: discount,
+                deliveryFee: deliveryFee,
+                total: total,
+            }
+        });
+    };
     return (
         <div>
             <Header />
@@ -148,7 +161,7 @@ const Cart = () => {
                     {/* Nút Go to Checkout */}
                     <div className="flex justify-center mt-6">
                         <button
-                            onClick={() => alert("Proceeding to checkout")}
+                            onClick={handleCheckout}
                             className="w-[505px] bg-black text-white font-bold italic py-4 rounded-[62px] ml-[738px] whitespace-nowrap"
                         >
                             Go to Checkout
