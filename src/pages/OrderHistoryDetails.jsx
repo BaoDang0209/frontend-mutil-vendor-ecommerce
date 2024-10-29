@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 const OrderHistoryDetails = () => {
   // Dữ liệu mẫu cho chi tiết đơn hàng
   const order = {
@@ -31,7 +32,9 @@ const OrderHistoryDetails = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="p-8 bg-gray-100 flex flex-col items-center">
+    <div>
+    <Header/>
+    <div className="p-8 bg-white-100 flex flex-col items-center">
       <div className="w-full max-w-5xl bg-white p-6 rounded-lg shadow-lg">
         {/* Thông tin đơn hàng */}
         <div className="flex justify-between items-center mb-6">
@@ -49,6 +52,8 @@ const OrderHistoryDetails = () => {
                   <th className="p-3">Item(s)</th>
                   <th className="p-3">Price</th>
                   <th className="p-3">Qty.</th>
+                  <th className="p-3">Size</th>
+                  <th className="p-3">Color</th>
                 </tr>
               </thead>
               <tbody>
@@ -62,7 +67,7 @@ const OrderHistoryDetails = () => {
                       />
                       <span>{item.name}</span>
                     </td>
-                    <td className="p-3">{item.price.toLocaleString()} USD</td>
+                    <td className="p-3">{item.price.toLocaleString()} VND</td>
                     <td className="p-3">{item.quantity}</td>
                   </tr>
                 ))}
@@ -78,26 +83,26 @@ const OrderHistoryDetails = () => {
             <div className="border rounded-lg p-4 mt-4">
               <div className="flex justify-between mb-2">
                 <span>Subtotal:</span>
-                <span>{order.subtotal.toLocaleString()} USD</span>
+                <span>{order.subtotal.toLocaleString()} VND</span>
               </div>
               <div className="flex justify-between mb-2">
                 <span>Shipping:</span>
-                <span>{order.shipping.toLocaleString()} USD</span>
+                <span>{order.shipping.toLocaleString()} VND</span>
               </div>
               <div className="flex justify-between mb-2">
                 <span>Estimated Tax:</span>
-                <span>{order.tax.toLocaleString()} USD</span>
+                <span>{order.tax.toLocaleString()} VND</span>
               </div>
               <div className="flex justify-between font-bold">
                 <span>Total:</span>
-                <span>{order.total.toLocaleString()} USD</span>
+                <span>{order.total.toLocaleString()} VND</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Thông tin bổ sung */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {/* Thông tin thanh toán */}
           <div className="border rounded-lg p-4">
             <h3 className="text-lg font-bold mb-2">Billing Information</h3>
@@ -115,30 +120,21 @@ const OrderHistoryDetails = () => {
           </div>
 
           {/* Thông tin giao hàng */}
-          <div className="border rounded-lg p-4">
-            <h3 className="text-lg font-bold mb-2">Delivery</h3>
-            <div className="text-gray-600">{order.delivery.method}</div>
-            <div className="mt-4">
-              <button
-                className="w-full bg-orange-500 text-white py-2 rounded-lg font-bold hover:bg-orange-600"
-                onClick={() => alert('Tracking package...')}
-              >
-                Track Package
-              </button>
-            </div>
-          </div>
+          
         </div>
 
         {/* Nút quay lại */}
         <div className="mt-6 flex justify-end">
           <button
-            onClick={() => navigate('/order-history')}
+            onClick={() => navigate('/history')}
             className="bg-gray-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-gray-600"
           >
             Back to Order History
           </button>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };
