@@ -1,12 +1,20 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import { useDispatch} from 'react-redux';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import { get_category } from './store/reducers/homeReducer';
+
+
 
 function App (){
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(get_category()) 
+},[])
+
   return (
     <BrowserRouter>
     <Routes>

@@ -10,11 +10,11 @@ import { get_products } from '../store/reducers/homeReducer';
 
 const Home = () => {
 
-    // const dispatch = useDispatch()
-    // const {products} = useSelector(state => state.home)
-    // useEffect(() => { 
-    //     dispatch(get_products())
-    // },[])
+    const dispatch = useDispatch()
+    const {products} = useSelector(state => state.home)
+    useEffect(() => { 
+        dispatch(get_products())
+    },[])
 
 
     return (
@@ -23,7 +23,7 @@ const Home = () => {
             <Banner/>
             <Categorys/>
             <div className='py-[45px]'>
-            {/* <FeatureProducts products={products} /> */}
+            <FeatureProducts products={products} />
             </div>
             <Footer/>
         </div>

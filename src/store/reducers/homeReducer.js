@@ -3,195 +3,191 @@ import api from "../../api/api";
 
 export const get_category = createAsyncThunk(
     'product/get_category',
-    async(_, { fulfillWithValue }) => {
+    async (_, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get('/home/get-categorys')
-            // console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get('/home/get-categorys');
+            console.log("Data từ API:", data);  
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
+
+
+// Fetch products
 export const get_products = createAsyncThunk(
     'product/get_products',
-    async(_, { fulfillWithValue }) => {
+    async (_, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get('/home/get-products')
-             console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get('/home/get-products');
+            console.log("Dữ liệu nhận từ API /home/get-products:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /home/get-products:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
-
+// Fetch price range for products
 export const price_range_product = createAsyncThunk(
     'product/price_range_product',
-    async(_, { fulfillWithValue }) => {
+    async (_, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get('/home/price-range-latest-product')
-             console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get('/home/price-range-latest-product');
+            console.log("Dữ liệu nhận từ API /home/price-range-latest-product:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /home/price-range-latest-product:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
+// Query products based on various filters
 export const query_products = createAsyncThunk(
     'product/query_products',
-    async(query , { fulfillWithValue }) => {
+    async (query, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get(`/home/query-products?category=${query.category}&&rating=${query.rating}&&lowPrice=${query.low}&&highPrice=${query.high}&&sortPrice=${query.sortPrice}&&pageNumber=${query.pageNumber}&&searchValue=${query.searchValue ? query.searchValue : ''} `)
-            //  console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get(`/home/query-products?category=${query.category}&&rating=${query.rating}&&lowPrice=${query.low}&&highPrice=${query.high}&&sortPrice=${query.sortPrice}&&pageNumber=${query.pageNumber}&&searchValue=${query.searchValue || ''}`);
+            console.log("Dữ liệu nhận từ API /home/query-products:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /home/query-products:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
+// Fetch product details
 export const product_details = createAsyncThunk(
     'product/product_details',
-    async(slug, { fulfillWithValue }) => {
+    async (slug, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get(`/home/product-details/${slug}`)
-            //  console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get(`/home/product-details/${slug}`);
+            console.log("Dữ liệu nhận từ API /home/product-details:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /home/product-details:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
+// Submit customer review
 export const customer_review = createAsyncThunk(
     'review/customer_review',
-    async(info, { fulfillWithValue }) => {
+    async (info, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.post('/home/customer/submit-review',info)
-            //  console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.post('/home/customer/submit-review', info);
+            console.log("Dữ liệu nhận từ API /home/customer/submit-review:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /home/customer/submit-review:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
-
+// Fetch customer reviews
 export const get_reviews = createAsyncThunk(
     'review/get_reviews',
-    async({productId, pageNumber}, { fulfillWithValue }) => {
+    async ({ productId, pageNumber }, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get(`/home/customer/get-reviews/${productId}?pageNo=${pageNumber}`)
-            //  console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get(`/home/customer/get-reviews/${productId}?pageNo=${pageNumber}`);
+            console.log("Dữ liệu nhận từ API /home/customer/get-reviews:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /home/customer/get-reviews:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
-
+// Fetch banners
 export const get_banners = createAsyncThunk(
     'banner/get_banners',
-    async( _ , { fulfillWithValue }) => {
+    async (_, { fulfillWithValue, rejectWithValue }) => {
         try {
-            const {data} = await api.get(`/banners`)
-            //  console.log(data)
-            return fulfillWithValue(data)
+            const { data } = await api.get(`/banners`);
+            console.log("Dữ liệu nhận từ API /banners:", data);
+            return fulfillWithValue(data);
         } catch (error) {
-            console.log(error.respone)
+            console.log("Lỗi khi gọi API /banners:", error.response || error.message);
+            return rejectWithValue(error.response?.data || error.message);
         }
     }
-)
-// End Method 
+);
 
-
-
-
+// Home reducer
 export const homeReducer = createSlice({
     name: 'home',
-    initialState:{
-        categorys : [],
-        products : [],
-        totalProduct : 0,
+    initialState: {
+        categorys: [],
+        products: [],
+        totalProduct: 0,
         parPage: 3,
-        latest_product : [],
-        topRated_product : [],
-        discount_product : [],
-        priceRange : {
-            low: 0,
-            high: 100
-        },
+        latest_product: [],
+        topRated_product: [],
+        discount_product: [],
+        priceRange: { low: 0, high: 100 },
         product: {},
         relatedProducts: [],
         moreProducts: [],
-        errorMessage : '',
+        errorMessage: '',
         successMessage: '',
         totalReview: 0,
         rating_review: [],
-        reviews : [],
-        banners: [] 
+        reviews: [],
+        banners: []
     },
-    reducers : {
-
-        messageClear : (state,_) => {
-            state.errorMessage = ""
-            state.successMessage = ""
+    reducers: {
+        messageClear: (state) => {
+            state.errorMessage = "";
+            state.successMessage = "";
         }
- 
     },
     extraReducers: (builder) => {
         builder
-        .addCase(get_category.fulfilled, (state, { payload }) => {
-            state.categorys = payload.categorys;
-        })
-        .addCase(get_products.fulfilled, (state, { payload }) => {
-            state.products = payload.products;
-            state.latest_product = payload.latest_product;
-            state.topRated_product = payload.topRated_product;
-            state.discount_product = payload.discount_product;
-        })
-        .addCase(price_range_product.fulfilled, (state, { payload }) => { 
-            state.latest_product = payload.latest_product;
-            state.priceRange = payload.priceRange; 
-        })
-        .addCase(query_products.fulfilled, (state, { payload }) => { 
-            state.products = payload.products;
-            state.totalProduct = payload.totalProduct;
-            state.parPage = payload.parPage; 
-        })
-
-        .addCase(product_details.fulfilled, (state, { payload }) => { 
-            state.product = payload.product;
-            state.relatedProducts = payload.relatedProducts;
-            state.moreProducts = payload.moreProducts; 
-        })
-
-        .addCase(customer_review.fulfilled, (state, { payload }) => {
-            state.successMessage = payload.message;
-        })
-
-        .addCase(get_reviews.fulfilled, (state, { payload }) => {
-            state.reviews = payload.reviews;
-            state.totalReview = payload.totalReview;
-            state.rating_review = payload.rating_review;
-        })
-
-        .addCase(get_banners.fulfilled, (state, { payload }) => {
-            state.banners = payload.banners; 
-        })
-
+            .addCase(get_category.fulfilled, (state, { payload }) => {
+                console.log("Payload của get_category:", payload);
+                state.categorys = payload.categorys || [];
+            })
+            .addCase(get_products.fulfilled, (state, { payload }) => {
+                state.products = payload.products;
+                state.latest_product = payload.latest_product;
+                state.topRated_product = payload.topRated_product;
+                state.discount_product = payload.discount_product;
+            })
+            .addCase(price_range_product.fulfilled, (state, { payload }) => {
+                state.latest_product = payload.latest_product;
+                state.priceRange = payload.priceRange;
+            })
+            .addCase(query_products.fulfilled, (state, { payload }) => {
+                state.products = payload.products;
+                state.totalProduct = payload.totalProduct;
+                state.parPage = payload.parPage;
+            })
+            .addCase(product_details.fulfilled, (state, { payload }) => {
+                state.product = payload.product;
+                state.relatedProducts = payload.relatedProducts;
+                state.moreProducts = payload.moreProducts;
+            })
+            .addCase(customer_review.fulfilled, (state, { payload }) => {
+                state.successMessage = payload.message;
+            })
+            .addCase(get_reviews.fulfilled, (state, { payload }) => {
+                state.reviews = payload.reviews;
+                state.totalReview = payload.totalReview;
+                state.rating_review = payload.rating_review;
+            })
+            .addCase(get_banners.fulfilled, (state, { payload }) => {
+                state.banners = payload.banners;
+            });
     }
-})
-export const {messageClear} = homeReducer.actions
-export default homeReducer.reducer
+});
+
+export const { messageClear } = homeReducer.actions;
+export default homeReducer.reducer;
