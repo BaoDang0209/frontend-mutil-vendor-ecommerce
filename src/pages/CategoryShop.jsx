@@ -1,12 +1,14 @@
-import {React,  useState } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import React, { useState, useContext } from "react";
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import PaginationShoes from "../components/PaginationShoes";
 import ColorPicker from "../components/ColorPicker";
 import PriceSlider from "../components/PriceSlider";
 import { IoIosArrowForward, IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import Categorys from '../components/Categorys'; // Kiểm tra lại đường dẫn và tên tệp
+import Categorys from '../components/Categorys'; // Kiểm tra lại đường dẫn và tên tệp\
+import Wishlist from '../components/dashboard/Wishlist'
+import { WishlistContext } from "../store/reducers/WishlistContext";
 
 
 const CategoryShop = () => {
@@ -17,6 +19,16 @@ const CategoryShop = () => {
   const togglePrice = () => setPriceOpen(!isPriceOpen);
   const toggleColor = () => setColorOpen(!isColorOpen);
   const toggleSize = () => setSizeOpen(!isSizeOpen);
+
+  const [wishlist, setWishlist] = useState([]);
+
+  // const addToWishlist = (product) => {
+  //   // Kiểm tra nếu sản phẩm đã có trong wishlist
+  //   if (!wishlist.find(item => item.id === product.id)) {
+  //     setWishlist([...wishlist, product]);
+  //   }
+  // };
+  const { addToWishlist } = useContext(WishlistContext);
 
   return (
     <div>
@@ -56,7 +68,7 @@ const CategoryShop = () => {
 
             {/* Nội dung bộ lọc */}
             <img className="w-full h-px object-cover" alt="Line" src="./img/details/line-10.svg" />
-            
+
             {/* Price Filter */}
             <div className="flex flex-col gap-5 w-full">
               <div className="flex items-center justify-between w-full cursor-pointer" onClick={togglePrice}>
@@ -109,10 +121,11 @@ const CategoryShop = () => {
             {/* Grid sản phẩm */}
             <div className="grid grid-cols-3 gap-4">
               {Array(9).fill(null).map((_, index) => (
-                <Categorys key={index} />
-              ))}
+                <Categorys key={index} addToWishlist={addToWishlist} />
+              ))} 
             </div>
-
+            {/* Truyền danh sách yêu thích vào Wishlist */}
+            {/* <Wishlist wishlist={wishlist} /> */}
             {/* Phân trang */}
             <div className="flex items-center justify-between mt-6">
               <button className="bg-white border border-gray-200 text-black px-4 py-2">

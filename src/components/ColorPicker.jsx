@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 
-const ColorPicker = () => {
-    const [selectedColor, setSelectedColor] = useState(null); // Trạng thái để theo dõi màu được chọn
+const ColorPicker = ({ setSelectedColor }) => {
+    const [selectedColor, setLocalSelectedColor] = useState(null); // Trạng thái để theo dõi màu được chọn
 
     const colorsRow1 = ['#00c12a', '#f50505', '#f5dd05', '#f57805', '#05c9f5'];
     const colorsRow2 = ['#053af5', '#7d05f5', '#f505a3', '#ffffff', '#000000'];
 
     const handleColorClick = (color) => {
-        setSelectedColor(color); // Cập nhật màu đã chọn
+        setLocalSelectedColor(color); // Cập nhật màu đã chọn cục bộ
+        setSelectedColor(color); // Cập nhật màu trong thành phần cha
     };
 
     const renderColor = (color) => (
         <div
+            key={color}
             className={`relative w-[37px] h-[37px] rounded-[18.5px] border border-solid border-[#00000033] ${color === selectedColor ? 'border-2 border-black' : ''}`}
             style={{ backgroundColor: color }}
             onClick={() => handleColorClick(color)} // Gán sự kiện nhấn

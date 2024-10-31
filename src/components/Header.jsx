@@ -48,7 +48,7 @@ const Header = () => {
                     </div>
 
                     <div className="inline-flex items-center gap-3.5 relative flex-[0_0_auto]">
-                        <Link to="/wishlist"> {/* Thêm Link đến Wishlist */}
+                        <Link to="/my-wishlist"> {/* Thêm Link đến Wishlist */}
                             <IoIosHeart />
                         </Link>
                         <Link to="/cart"> {/* Thêm Link đến Wishlist */}
@@ -68,7 +68,7 @@ const Header = () => {
                                             <Link to="/profile">My Profile</Link>
                                         </li>
                                         <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
-                                            <Link to="/wishlist">Wishlist</Link>
+                                            <Link to="/my-wishlist">Wishlist</Link>
                                         </li>
                                         <li className="py-2 px-4 hover:bg-gray-100 cursor-pointer">
                                             <Link to="/history">History</Link>

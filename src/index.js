@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import store from './store/index';
+import store from './store/store';
 import { Toaster } from 'react-hot-toast';
+import { WishlistProvider  } from './store/reducers/WishlistContext';
+import { CartProvider  } from './store/reducers/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store} >
+    <WishlistProvider>
+    <CartProvider>
     <Suspense>
     <App /> 
     <Toaster
@@ -22,6 +26,9 @@ root.render(
       }} 
     />
     </Suspense>
+    </CartProvider>
+    </WishlistProvider>
+    
     </Provider>
 );
 
