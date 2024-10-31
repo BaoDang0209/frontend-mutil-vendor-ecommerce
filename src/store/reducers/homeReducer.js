@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import api from "../../api/api";
 
-
 export const get_category = createAsyncThunk(
     'product/get_category',
     async(_, { fulfillWithValue }) => {
