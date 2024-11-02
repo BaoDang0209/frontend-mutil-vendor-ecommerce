@@ -79,7 +79,7 @@ const Header = () => {
             <img src="http://localhost:3000/images/language.png" alt="" />
             <span><IoMdArrowDropdown /></span>
             <ul className='absolute invisible transition-all top-12 rounded-sm duration-200 text-white p-2 w-[100px] flex flex-col gap-3 group-hover:visible group-hover:top-6 group-hover:bg-black z-10'>
-            <li>Hindi</li>
+            <li>VietNamese</li>
             <li>English</li>
             </ul>
         </div>
@@ -194,7 +194,7 @@ const Header = () => {
             <img src="http://localhost:3000/images/language.png" alt="" />
             <span><IoMdArrowDropdown /></span>
             <ul className='absolute invisible transition-all top-12 rounded-sm duration-200 text-white p-2 w-[100px] flex flex-col gap-3 group-hover:visible group-hover:top-6 group-hover:bg-black z-10'>
-            <li>Hindi</li>
+            <li>VietNamese</li>
             <li>English</li>
             </ul>
         </div>
