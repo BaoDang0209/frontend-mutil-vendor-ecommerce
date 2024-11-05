@@ -45,7 +45,15 @@ const Home = () => {
             </div>
             <Footer/>
         </div>
-    );
+
+
+
+        {/* Thêm nội dung khác như danh sách sản phẩm, banner, v.v. */}
+
+
+      <Footer /> {/* Sử dụng component Footer */}
+    </div>
+  );
 };
 
 export default Home;
