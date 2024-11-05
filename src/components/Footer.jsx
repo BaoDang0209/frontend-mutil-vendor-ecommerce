@@ -1,5 +1,8 @@
 import React from 'react';
-
+import { FaGithub } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="w-full bg-[#efefef] mt-10"> {/* Đảm bảo footer nằm dưới cùng */}
@@ -15,16 +18,16 @@ const Footer = () => {
                         </div>
                         <div className="flex gap-2">
                             <div className="w-7 h-7 bg-white rounded-full border border-gray-300 flex items-center justify-center">
-                                <img className="w-3 h-3" alt="Twitter Logo" src="img/footer/twitter.png" />
+                                <FaTwitter className="w-3 h-3" alt="Twitter Logo" />
                             </div>
                             <div className="w-7 h-7 bg-white rounded-full border border-gray-300 flex items-center justify-center">
-                                <img className="w-4 h-4" alt="Facebook Logo" src="img/footer/fb.png" />
+                                <FaFacebookSquare className="w-4 h-4" alt="Facebook Logo"/>
                             </div>
                             <div className="w-7 h-7 bg-white rounded-full border border-gray-300 flex items-center justify-center">
-                                <img className="w-3.5 h-3.5" alt="Instagram Logo" src="img/footer/insta.png" />
+                                <AiFillInstagram className="w-3.5 h-3.5" alt="Instagram Logo"/>
                             </div>
                             <div className="w-7 h-7 bg-white rounded-full border border-gray-300 flex items-center justify-center">
-                                <img className="w-3.5 h-3.5" alt="Github Logo" src="img/footer/github.png" />
+                                <FaGithub className="w-3.5 h-3.5" alt="Github Logo"/>
                             </div>
                         </div>
                     </div>
