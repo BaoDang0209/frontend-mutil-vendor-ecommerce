@@ -17,7 +17,8 @@ import Orders from './components/dashboard/Orders';
 import ChangePassword from './components/dashboard/ChangePassword';
 import Wishlist from './components/dashboard/Wishlist';
 import OrderDetails from './components/dashboard/OrderDetails';
-
+import CategoryShop from './pages/CategoryShop';
+import SearchProducts from './pages/SearchProducts';
 
 
 
@@ -35,6 +36,8 @@ function App() {
       <Route path='/login' element={<Login/>} />
       <Route path='/register' element={<Register/>} />
       <Route path='/shops' element={<Shops/>} />
+      <Route path='/products?' element={<CategoryShop/>} />
+      <Route path='/products/search?' element={<SearchProducts/>} />
 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
