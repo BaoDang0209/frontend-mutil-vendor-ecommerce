@@ -6,7 +6,7 @@ import { Link, Outlet} from 'react-router-dom';
 import { IoIosHome } from "react-icons/io";
 import { FaBorderAll } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
-import { IoMdLogOut } from "react-icons/io";
+import { FaHistory } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 
 
@@ -48,8 +48,8 @@ const Dashboard = () => {
             <Link to='/dashboard/change-password' className='block' >Change Password  </Link>
                 </li>
                 <li className='flex justify-start items-center gap-2 py-2 cursor-pointer'>
-            <span className='text-xl'><IoMdLogOut/></span>
-            <div  className='block' >Logout </div>
+            <span className='text-xl'><FaHistory/></span>
+            <Link to='/dashboard/history'  className='block' >History </Link>
                 </li> 
 
             </ul> 

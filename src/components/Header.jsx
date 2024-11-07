@@ -14,6 +14,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
 import { FaHistory, FaSignOutAlt } from 'react-icons/fa';
 import { get_card_products, get_wishlist_products } from '../store/reducers/cardReducer';
+import { logout } from '../store/reducers/authReducer';
 
 const Header = () => {
 
@@ -51,6 +52,10 @@ const Header = () => {
             dispatch(get_wishlist_products(userInfo.id))
         }
     }, [userInfo])
+
+    const handleLogout = () => {
+        dispatch(logout()); 
+    };
 
     return (
         <div className='w-full bg-white'>
@@ -115,19 +120,19 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/wishlist" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                <Link to="/dashboard/my-wishlist" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
                                                     <FaHeart size={14} />
                                                     Wishlist
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/history" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                <Link to="/dashboard/history" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
                                                     <FaHistory size={14} />
                                                     History
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/logout" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2 text-red-500">
+                                                <Link onClick={handleLogout} to='/login' className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2 text-red-500">
                                                     <FaSignOutAlt size={14} />
                                                     Log out
                                                 </Link>
