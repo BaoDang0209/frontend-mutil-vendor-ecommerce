@@ -16,6 +16,8 @@ import Index from './components/dashboard/Index';
 import Orders from './components/dashboard/Orders';
 import ChangePassword from './components/dashboard/ChangePassword';
 import Wishlist from './components/dashboard/Wishlist';
+import History from './components/dashboard/History';
+
 import OrderDetails from './components/dashboard/OrderDetails';
 import CategoryShop from './pages/CategoryShop';
 import SearchProducts from './pages/SearchProducts';
@@ -45,6 +47,7 @@ function App() {
       <Route path='' element={<Index/>} />
       <Route path='my-orders' element={<Orders/>} /> 
       <Route path='change-password' element={<ChangePassword/>} /> 
+      <Route path='history' element={<History/>} /> 
       <Route path='my-wishlist' element={<Wishlist/>} /> 
       <Route path='order/details/:orderId' element={<OrderDetails/>} /> 
 
