@@ -33,7 +33,7 @@ export const get_user_infor = createAsyncThunk(
                 }
             };
 
-            const { data } = await api.get(`/customer/get-customerInfor/${userId}`, config);
+            const { data } = await api.get(`/customer/get-customer/${userId}`, config);
             return fulfillWithValue(data);
         } catch (error) {
             console.error("Error fetching user information:", error);
