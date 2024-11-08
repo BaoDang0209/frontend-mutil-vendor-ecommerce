@@ -22,7 +22,7 @@ import OrderDetails from './components/dashboard/OrderDetails';
 import CategoryShop from './pages/CategoryShop';
 import SearchProducts from './pages/SearchProducts';
 import Card from './pages/Card';
-
+import Details from './pages/Details';
 
 
 function App() {
@@ -42,6 +42,7 @@ function App() {
       <Route path='/products?' element={<CategoryShop/>} />
       <Route path='/products/search?' element={<SearchProducts/>} />
       <Route path='/card' element={<Card/>} />
+      <Route path='/product/details/:slug' element={<Details/>} /> 
 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
