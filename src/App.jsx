@@ -21,6 +21,7 @@ import History from './components/dashboard/History';
 import OrderDetails from './components/dashboard/OrderDetails';
 import CategoryShop from './pages/CategoryShop';
 import SearchProducts from './pages/SearchProducts';
+import Card from './pages/Card';
 
 
 
@@ -40,6 +41,7 @@ function App() {
       <Route path='/shops' element={<Shops/>} />
       <Route path='/products?' element={<CategoryShop/>} />
       <Route path='/products/search?' element={<SearchProducts/>} />
+      <Route path='/card' element={<Card/>} />
 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
