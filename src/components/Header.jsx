@@ -109,7 +109,7 @@ const Header = () => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/profile" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                <Link to="/dashboard/userinfor" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
                                                     <FaUser size={14} />
                                                     Information
                                                 </Link>
