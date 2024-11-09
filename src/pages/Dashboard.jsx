@@ -36,6 +36,10 @@ const Dashboard = () => {
             <Link to='/dashboard' className='block' >Dashboard </Link>
                 </li>
                 <li className='flex justify-start items-center gap-2 py-2'>
+            <span className='text-xl'><IoIosHome /></span>
+            <Link to='/dashboard/userinfor' className='block' >User Information </Link>
+                </li>
+                <li className='flex justify-start items-center gap-2 py-2'>
             <span className='text-xl'><FaBorderAll/></span>
             <Link to='/dashboard/my-orders' className='block' >My Orders </Link>
                 </li>

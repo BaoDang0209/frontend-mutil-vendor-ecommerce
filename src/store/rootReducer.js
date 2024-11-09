@@ -10,6 +10,5 @@ const rootReducer = {
     card: cardReducer,
     order: orderReducer,
     dashboard: dashboardReducer
-
 }
 export default rootReducer;

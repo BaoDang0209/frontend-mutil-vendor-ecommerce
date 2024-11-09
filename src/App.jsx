@@ -16,8 +16,12 @@ import Index from './components/dashboard/Index';
 import Orders from './components/dashboard/Orders';
 import ChangePassword from './components/dashboard/ChangePassword';
 import Wishlist from './components/dashboard/Wishlist';
+<<<<<<< HEAD
 import History from './components/dashboard/History';
 
+=======
+import UserInfor from './components/dashboard/UserInfor';
+>>>>>>> UserInfor
 import OrderDetails from './components/dashboard/OrderDetails';
 import CategoryShop from './pages/CategoryShop';
 import SearchProducts from './pages/SearchProducts';
@@ -53,6 +57,8 @@ function App() {
       <Route path='history' element={<History/>} /> 
       <Route path='my-wishlist' element={<Wishlist/>} /> 
       <Route path='order/details/:orderId' element={<OrderDetails/>} /> 
+      <Route path='userinfor' element={<UserInfor/>} /> 
+
 
        
        </Route> 
