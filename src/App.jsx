@@ -16,17 +16,15 @@ import Index from './components/dashboard/Index';
 import Orders from './components/dashboard/Orders';
 import ChangePassword from './components/dashboard/ChangePassword';
 import Wishlist from './components/dashboard/Wishlist';
-<<<<<<< HEAD
 import History from './components/dashboard/History';
-
-=======
 import UserInfor from './components/dashboard/UserInfor';
->>>>>>> UserInfor
+
 import OrderDetails from './components/dashboard/OrderDetails';
 import CategoryShop from './pages/CategoryShop';
 import SearchProducts from './pages/SearchProducts';
 import Card from './pages/Card';
 import Details from './pages/Details';
+import Shipping from './pages/Shipping';
 
 
 function App() {
@@ -47,6 +45,7 @@ function App() {
       <Route path='/products/search?' element={<SearchProducts/>} />
       <Route path='/card' element={<Card/>} />
       <Route path='/product/details/:slug' element={<Details/>} /> 
+      <Route path='/shipping' element={<Shipping/>} />
 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
