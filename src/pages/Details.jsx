@@ -11,7 +11,7 @@ import { FaFacebookF} from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-//import Reviews from '../components/Reviews';
+import Reviews from '../components/Reviews';
 import {Pagination } from 'swiper/modules';
 import 'swiper/css'; 
 import 'swiper/css/pagination';
@@ -337,13 +337,13 @@ const Details = () => {
                     <button onClick={() => setState('description')} className={`py-1 hover:text-white px-5 hover:bg-[#059473] ${state === 'description' ? 'bg-[#059473] text-white' : 'bg-slate-200 text-slate-700' } rounded-sm`}>Description </button>
                     </div>
 
-    {/* <div>
+    <div>
         {
             state === 'reviews' ? <Reviews product={product} /> : <p className='py-5 text-slate-600'>
     {product.description}
             </p>
         }
-    </div>  */}
+    </div> 
          </div> 
          </div>
 
