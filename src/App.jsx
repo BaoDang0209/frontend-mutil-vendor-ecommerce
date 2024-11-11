@@ -25,6 +25,7 @@ import SearchProducts from './pages/SearchProducts';
 import Card from './pages/Card';
 import Details from './pages/Details';
 import Shipping from './pages/Shipping';
+import Payment from './pages/Payment';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Route path='/card' element={<Card/>} />
       <Route path='/product/details/:slug' element={<Details/>} /> 
       <Route path='/shipping' element={<Shipping/>} />
+      <Route path='/payment' element={<Payment/>} />
 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
