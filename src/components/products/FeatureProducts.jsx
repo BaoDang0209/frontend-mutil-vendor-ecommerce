@@ -24,6 +24,8 @@ const FeatureProducts = ({products}) => {
            }))
         } else {
             navigate('/login')
+            toast.error("Login first")
+            dispatch(messageClear())  
         }
     }
 
@@ -50,25 +52,32 @@ const FeatureProducts = ({products}) => {
 
     const add_wishlist = (pro) => {
         const isInWishlist = wishlist.some(item => item.productId === pro._id);
-    
-        if (!isInWishlist) {
-            dispatch(add_to_wishlist({
-                userId: userInfo.id,
-                productId: pro._id,
-                name: pro.name,
-                price: pro.price,
-                image: pro.images[0],
-                discount: pro.discount,
-                rating: pro.rating,
-                slug: pro.slug
-            })).then(() => {
-                setWishlistState(prevState => ({
-                    ...prevState,
-                    [pro._id]: true
-                }));
-            });
-        } else {
-            toast.error("Product is Already in wishlist")
+        if(userInfo){
+            if (!isInWishlist) {
+                dispatch(add_to_wishlist({
+                    userId: userInfo.id,
+                    productId: pro._id,
+                    name: pro.name,
+                    price: pro.price,
+                    image: pro.images[0],
+                    discount: pro.discount,
+                    rating: pro.rating,
+                    slug: pro.slug
+                })).then(() => {
+                    setWishlistState(prevState => ({
+                        ...prevState,
+                        [pro._id]: true
+                    }));
+                });
+            } else {
+                toast.error("Product is Already in wishlist")
+                dispatch(messageClear())  
+            }
+        }
+        else {
+            navigate('/login')
+            toast.error("Login first")
+            dispatch(messageClear())  
         }
 
         

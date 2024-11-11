@@ -109,6 +109,8 @@ const Details = () => {
            }))
         } else {
             navigate('/login')
+            toast.error("Login first")
+            dispatch(messageClear())  
         }
     }
 
@@ -126,6 +128,8 @@ const Details = () => {
             }))
         } else {
             navigate('/login')
+            toast.error("Login first")
+            dispatch(messageClear()) 
         }
        
     }
