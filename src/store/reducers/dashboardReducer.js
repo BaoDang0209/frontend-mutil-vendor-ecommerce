@@ -6,8 +6,8 @@ export const get_dashboard_index_data = createAsyncThunk(
     'dashboard/get_dashboard_index_data',
     async(userId, { rejectWithValue,fulfillWithValue }) => {
         try {
-            const {data} = await api.get(`/home/coustomer/get-dashboard-data/${userId}`) 
-            // console.log(data)
+            const {data} = await api.get(`/home/customer/get-dashboard-data/${userId}`) 
+            console.log(data)
             return fulfillWithValue(data)
         } catch (error) {
             return rejectWithValue(error.response.data)
@@ -53,7 +53,7 @@ export const dashboardReducer = createSlice({
         totalOrder: 0,
         pendingOrder: 0,
         cancelledOrder: 0,
-        userInfor: null, // Set to null to indicate no user info initially
+        userInfor: null, 
         loader: false
     },
     reducers : {
@@ -78,7 +78,7 @@ export const dashboardReducer = createSlice({
             state.loader = false;
             state.successMessage = "User information loaded successfully.";
         })
-        // Handling get_dashboard_index_data cases
+
         .addCase(get_dashboard_index_data.pending, (state) => {
             state.loader = true;
         })
