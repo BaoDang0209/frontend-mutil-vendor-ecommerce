@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './../components/Header';
 import Footer from './../components/Footer';
 import { useLocation } from 'react-router-dom';
-//import Stripe from '../components/Stripe';
+import Stripe from '../components/Stripe';
 
 const Payment = () => {
 
@@ -34,11 +34,11 @@ const Payment = () => {
         </div> 
         </div> 
           
-           {/* {
+           {
             paymentMethod === 'stripe' && <div>
                 <Stripe orderId={orderId} price={price} /> 
             </div>
-           } */}
+           }
         {
             paymentMethod === 'cod' && <div className='w-full px-4 py-8 bg-white shadow-sm'>
                 <button className='px-10 py-[6px] rounded-sm hover:shadow-green-500/20 hover:shadow-lg bg-[#059473] text-white'>Pay Now</button>

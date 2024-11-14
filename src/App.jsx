@@ -26,6 +26,7 @@ import Card from './pages/Card';
 import Details from './pages/Details';
 import Shipping from './pages/Shipping';
 import Payment from './pages/Payment';
+import ConfirmOrder from './pages/ConfirmOrder';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
       <Route path='/product/details/:slug' element={<Details/>} /> 
       <Route path='/shipping' element={<Shipping/>} />
       <Route path='/payment' element={<Payment/>} />
+      <Route path='/order/confirm?' element={<ConfirmOrder/>} /> 
 
 
       <Route path='/dashboard' element={<ProtectUser/>} >
