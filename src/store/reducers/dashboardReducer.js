@@ -43,6 +43,37 @@ export const get_user_infor = createAsyncThunk(
     }
 );
 
+export const changePassword = createAsyncThunk(
+    'dashboard/change-password',
+    async ({ currentPassword, newPassword, confirmPassword }, { rejectWithValue }) => {
+        try {
+            const token = localStorage.getItem('customerToken');
+            
+            if (!token) {
+                throw new Error("No token found");
+            }
+
+            const decodedToken = jwtDecode(token);
+            console.log("Decoded Token:", decodedToken);
+
+            const config = {
+                headers: {
+                    Authorization: `Bearer ${token}` 
+                }
+            };
+
+            const { data } = await api.post(`/customer/update-password`, {
+                currentPassword,
+                newPassword,
+                confirmPassword
+            }, config);            
+
+            return data;
+        } catch (error) {
+            return rejectWithValue(error.response?.data || "An error occurred");
+        }
+    }
+);
 
 export const dashboardReducer = createSlice({
     name: 'dashboard',
@@ -92,6 +123,19 @@ export const dashboardReducer = createSlice({
         .addCase(get_dashboard_index_data.rejected, (state, { payload }) => {
             state.errorMessage = payload?.error || "Failed to load dashboard data";
             state.loader = false;
+        })
+        .addCase(changePassword.pending, (state) => {
+            state.loader = true;
+            state.errorMessage = "";
+            state.successMessage = "";
+        })
+        .addCase(changePassword.fulfilled, (state, { payload }) => {
+            state.loader = false;
+            state.successMessage = "Password updated successfully";
+        })
+        .addCase(changePassword.rejected, (state, { payload }) => {
+            state.loader = false;
+            state.errorMessage = typeof payload === 'object' ? JSON.stringify(payload) : payload || "Failed to change password";
         });
         
     }
