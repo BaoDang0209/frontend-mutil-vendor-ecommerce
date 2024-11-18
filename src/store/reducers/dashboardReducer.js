@@ -75,6 +75,22 @@ export const changePassword = createAsyncThunk(
     }
 );
 
+export const updateCustomer = createAsyncThunk(
+    'dashboard/updateCustomer',
+    async (customerData, { rejectWithValue, fulfillWithValue }) => {
+        try {
+            const {data} = await api.put(
+                `/customer/customer-update/${customerData.userId}`,
+                customerData
+            );
+            return fulfillWithValue(data)
+        } catch (error) {
+            return rejectWithValue(error.response.data || "Failed to update customer");
+        }
+    }
+);
+
+
 export const dashboardReducer = createSlice({
     name: 'dashboard',
     initialState:{
@@ -84,7 +100,7 @@ export const dashboardReducer = createSlice({
         totalOrder: 0,
         pendingOrder: 0,
         cancelledOrder: 0,
-        userInfor: null, 
+        userInfor: [], 
         loader: false
     },
     reducers : {
@@ -136,8 +152,21 @@ export const dashboardReducer = createSlice({
         .addCase(changePassword.rejected, (state, { payload }) => {
             state.loader = false;
             state.errorMessage = typeof payload === 'object' ? JSON.stringify(payload) : payload || "Failed to change password";
+        })
+
+        .addCase(updateCustomer.fulfilled, (state, { payload }) => {
+            state.loader = false;
+            state.successMessage = payload.message;
+            const index = state.userInfor.findIndex(user => user._id === payload._id);
+            if (index !== -1) {
+                state.userInfor[index] = payload;
+            }
+        })
+        .addCase(updateCustomer.rejected, (state, { payload }) => {
+            state.loader = false;
+            state.errorMessage = payload || "An error occurred.";
         });
-        
+
     }
 })
 export const {messageClear} = dashboardReducer.actions

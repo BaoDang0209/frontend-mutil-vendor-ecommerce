@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { get_user_infor } from '../../store/reducers/dashboardReducer';
-import { FaPen } from 'react-icons/fa'; // Import pen icon
+import { get_user_infor, updateCustomer } from '../../store/reducers/dashboardReducer';
+import { FaPen } from 'react-icons/fa'; 
 
 const UserInfor = () => {
     const dispatch = useDispatch();
@@ -62,8 +62,19 @@ const UserInfor = () => {
     };
 
     const handleSave = () => {
-        console.log("Updated data:", formData);
-        setUpdateMode(false);
+        dispatch(updateCustomer({ 
+            ...formData
+        }))
+        .unwrap()
+        .then(() => {
+            alert("Customer updated successfully!");
+            setUpdateMode(false);
+        })
+        .catch((err) => {
+            console.error("Update failed:", err);
+            alert("Failed to update customer information.");
+            window.location.reload();
+        });
     };
 
     if (loader) return <p className="text-center text-slate-600 mt-20 text-lg">Loading...</p>;
