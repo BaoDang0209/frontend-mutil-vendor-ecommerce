@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { FaEye, FaRegHeart } from "react-icons/fa";
+import React, { useEffect, useState  } from 'react';
+import { FaEye, FaRegHeart, FaHeart } from "react-icons/fa";
 import { RiShoppingCartLine } from "react-icons/ri";
 import Rating from '../Rating';
 import { Link, useNavigate } from 'react-router-dom';
@@ -12,7 +12,8 @@ const FeatureProducts = ({products}) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const {userInfo } = useSelector(state => state.auth)
-    const {errorMessage,successMessage } = useSelector(state => state.card)
+    const {errorMessage,successMessage, wishlist  } = useSelector(state => state.card)
+    const [wishlistState, setWishlistState] = useState({});
 
     const add_card = (id) => {
         if (userInfo) {
@@ -23,6 +24,8 @@ const FeatureProducts = ({products}) => {
            }))
         } else {
             navigate('/login')
+            toast.error("Login first")
+            dispatch(messageClear())  
         }
     }
 
@@ -39,18 +42,50 @@ const FeatureProducts = ({products}) => {
     },[successMessage,errorMessage])
 
 
+    useEffect(() => {
+        const initialWishlistState = products.reduce((state, product) => {
+            state[product._id] = wishlist.some(item => item.productId === product._id);
+            return state;
+        }, {});
+        setWishlistState(initialWishlistState);
+    }, [wishlist, products]);
+
     const add_wishlist = (pro) => {
-        dispatch(add_to_wishlist({
-            userId: userInfo.id,
-            productId: pro._id,
-            name: pro.name,
-            price: pro.price,
-            image: pro.images[0],
-            discount: pro.discount,
-            rating: pro.rating,
-            slug: pro.slug
-        }))
-    }
+        const isInWishlist = wishlist.some(item => item.productId === pro._id);
+        if(userInfo){
+            if (!isInWishlist) {
+                dispatch(add_to_wishlist({
+                    userId: userInfo.id,
+                    productId: pro._id,
+                    name: pro.name,
+                    price: pro.price,
+                    image: pro.images[0],
+                    discount: pro.discount,
+                    rating: pro.rating,
+                    slug: pro.slug
+                })).then(() => {
+                    setWishlistState(prevState => ({
+                        ...prevState,
+                        [pro._id]: true
+                    }));
+                });
+            } else {
+                toast.error("Product is Already in wishlist")
+                dispatch(messageClear())  
+            }
+        }
+        else {
+            navigate('/login')
+            toast.error("Login first")
+            dispatch(messageClear())  
+        }
+
+        
+    };
+    
+    
+    
+
 
 
     return ( 
@@ -74,8 +109,11 @@ const FeatureProducts = ({products}) => {
         <img className='sm:w-full w-full h-[240px]' src={p.images[0]} alt="" />  
 
         <ul className='flex transition-all duration-700 -bottom-10 justify-center items-center gap-2 absolute w-full group-hover:bottom-3'>
-            <li onClick={() => add_wishlist(p)} className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#059473] hover:text-white hover:rotate-[720deg] transition-all'>
-            <FaRegHeart />
+            <li 
+                onClick={() => add_wishlist(p)} 
+                className={`w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full transition-all hover:bg-[#059473] ${wishlistState[p._id] ? 'text-red-500' : 'hover:text-white hover:rotate-[720deg]'}`}
+            >
+                {wishlistState[p._id] ? <FaHeart /> : <FaRegHeart />}
             </li>
             <Link to={`/product/details/${p.slug}`} className='w-[38px] h-[38px] cursor-pointer bg-white flex justify-center items-center rounded-full hover:bg-[#059473] hover:text-white hover:rotate-[720deg] transition-all'>
             <FaEye />

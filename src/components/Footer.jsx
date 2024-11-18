@@ -5,16 +5,15 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
-        <div className="w-full bg-[#efefef] mt-10"> {/* Đảm bảo footer nằm dưới cùng */}
+        <div className="w-full bg-[#efefef] mt-10"> 
             <div className="container mx-auto py-10">
                 <div className="flex flex-wrap justify-between px-4">
-                    {/* Phần thông tin chung */}
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-6">
-                            <div className="font-bold text-black text-xl">SHU</div>
+                            <div className="font-bold text-black text-xl">DG-Eco</div>
                             <p className="text-gray-600 text-sm">
-                                We have shoes that suit your style and which you’re proud to wear. From women to men.
-                            </p>
+                                We have products for your style and which you’re proud to wear. From women to men
+                            </p>.
                         </div>
                         <div className="flex gap-2">
                             <div className="w-7 h-7 bg-white rounded-full border border-gray-300 flex items-center justify-center">
