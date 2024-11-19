@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { get_category } from './store/reducers/homeReducer';
+import Chatbot from './components/Chatbot';
 
 
 
