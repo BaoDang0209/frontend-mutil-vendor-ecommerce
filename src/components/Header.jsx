@@ -53,6 +53,10 @@ const Header = () => {
         }
     }, [userInfo])
 
+    const handleLogout = () => {
+        dispatch(logout()); 
+    };
+
     return (
         <div className='w-full bg-white'>
             <div className='header-top bg-[#caddff] md-lg:hidden'>
@@ -87,22 +91,6 @@ const Header = () => {
                                     </ul>
                                 </div>
 
-                                {/* {
-            // userInfo ? <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black' to='/dashboard'>
-            userInfo ? <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black'> 
-                <span> <FaUser/> </span>
-                <span> {userInfo.name} </span>
-                <span><IoMdArrowDropdown /></span>
-                <ul className='absolute invisible transition-all top-12 rounded-sm duration-200 text-white p-2 w-[100px] flex flex-col gap-3 group-hover:visible group-hover:top-6 group-hover:bg-black z-10'>
-            <li>VietNamese</li>
-            <li>English</li>
-            </ul>
-                 </Link> : <Link to='/login' className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black'>
-                <span> <FaLock /> </span>
-                <span>Login </span>
-                 </Link>
-        } */}
-
                                 {userInfo ? (
                                     <div className="relative group">
                                         <Link className='flex cursor-pointer justify-center items-center gap-2 text-sm text-black'>
@@ -120,25 +108,31 @@ const Header = () => {
                 bg-white text-black p-2 w-[160px] flex flex-col gap-2 z-20`}
                                         >
                                             <li>
-                                                <Link to="/profile" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                <Link to="/dashboard" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                    <FaUser size={14} />
+                                                    Dashboard
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/dashboard/userinfor" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
                                                     <FaUser size={14} />
                                                     Information
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/wishlist" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                <Link to="/dashboard/my-wishlist" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
                                                     <FaHeart size={14} />
                                                     Wishlist
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/history" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
+                                                <Link to="/dashboard/history" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2">
                                                     <FaHistory size={14} />
                                                     History
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to="/logout" className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2 text-red-500">
+                                                <Link onClick={handleLogout} to='/login' className="hover:bg-gray-100 p-2 rounded cursor-pointer flex items-center gap-2 text-red-500">
                                                     <FaSignOutAlt size={14} />
                                                     Log out
                                                 </Link>
@@ -186,7 +180,7 @@ const Header = () => {
                             <div className='flex justify-between md-lg:justify-center items-center flex-wrap pl-8'>
                                 <ul className='flex justify-start items-start gap-8 text-sm font-bold uppercase md-lg:hidden'>
                                     <li>
-                                        <Link className={`p-2 block ${pathname === '/' ? 'text-[#059473]' : 'text-slate-600'} `} >Home</Link>
+                                        <Link to='/' className={`p-2 block ${pathname === '/' ? 'text-[#059473]' : 'text-slate-600'} `} >Home</Link>
                                     </li>
 
                                     <li>

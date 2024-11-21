@@ -7,7 +7,6 @@ import Products from '../components/products/Products';
 import Footer from '../components/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_products } from '../store/reducers/homeReducer';
-import ChatBot from '../components/Chatbot';
 
 const Home = () => {
 
@@ -44,7 +43,6 @@ const Home = () => {
                     </div> 
                 </div> 
             </div>
-            <ChatBot/>
             <Footer/>
         </div>
   );

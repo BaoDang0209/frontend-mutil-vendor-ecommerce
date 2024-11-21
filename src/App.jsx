@@ -8,7 +8,25 @@ import Shops from './pages/Shops';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { get_category } from './store/reducers/homeReducer';
-import Chatbot from './components/Chatbot';
+import { useDispatch} from 'react-redux';
+
+import Dashboard from './pages/Dashboard';
+import ProtectUser from './utils/ProtectUser';
+import Index from './components/dashboard/Index';
+import Orders from './components/dashboard/Orders';
+import ChangePassword from './components/dashboard/ChangePassword';
+import Wishlist from './components/dashboard/Wishlist';
+import History from './components/dashboard/History';
+import UserInfor from './components/dashboard/UserInfor';
+
+import OrderDetails from './components/dashboard/OrderDetails';
+import CategoryShop from './pages/CategoryShop';
+import SearchProducts from './pages/SearchProducts';
+import Card from './pages/Card';
+import Details from './pages/Details';
+import Shipping from './pages/Shipping';
+import Payment from './pages/Payment';
+import ConfirmOrder from './pages/ConfirmOrder';
 
 
 function App() {
