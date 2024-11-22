@@ -12,6 +12,18 @@ const ChangePassword = () => {
         confirmPassword: ''
     });
 
+    const [userId, setUserId] = useState(null);
+
+    useEffect(() => {
+        const id = localStorage.getItem('id');
+        if (id && !userInfor) {
+            dispatch(get_user_infor(id));
+            setUserId(id); 
+        } else if (userInfor?.id) {
+            setUserId(userInfor.id); 
+        }
+    }, [dispatch, userInfor]);
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -19,20 +31,11 @@ const ChangePassword = () => {
         });
     };
 
-    useEffect(() => {
-        if (!userInfor) {
-            const id = localStorage.getItem('id');
-            if (id) {
-                dispatch(get_user_infor(id));
-            }
-        }
-    }, [dispatch, userInfor]);
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (userInfor?.id) {
+        if (userId) {
             dispatch(changePassword({ 
-                id: userInfor.id, 
+                id: userId, 
                 ...formData 
             }));
         } else {

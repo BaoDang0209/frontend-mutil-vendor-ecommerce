@@ -33,7 +33,7 @@ export const get_user_infor = createAsyncThunk(
                 }
             };
 
-            const { data } = await api.get(`/customer/get-customer/${userId}`, config);
+            const { data } = await api.get(`/get-customer/${userId}`, config);
             return fulfillWithValue(data);
         } catch (error) {
             console.error("Error fetching user information:", error);
@@ -45,7 +45,7 @@ export const get_user_infor = createAsyncThunk(
 
 export const changePassword = createAsyncThunk(
     'dashboard/change-password',
-    async ({ currentPassword, newPassword, confirmPassword }, { rejectWithValue }) => {
+    async ({userId, currentPassword, newPassword, confirmPassword }, { rejectWithValue,fulfillWithValue }) => {
         try {
             const token = localStorage.getItem('customerToken');
             
@@ -55,6 +55,10 @@ export const changePassword = createAsyncThunk(
 
             const decodedToken = jwtDecode(token);
             console.log("Decoded Token:", decodedToken);
+            
+            if (!userId) {
+                throw new Error("Invalid token: User ID not found");
+            }
 
             const config = {
                 headers: {
@@ -62,13 +66,14 @@ export const changePassword = createAsyncThunk(
                 }
             };
 
-            const { data } = await api.post(`/customer/update-password`, {
+            // Include the user ID in the API call
+            const { data } = await api.put(`/update-password/${userId}`, {
                 currentPassword,
                 newPassword,
                 confirmPassword
             }, config);            
 
-            return data;
+            return fulfillWithValue(data);
         } catch (error) {
             return rejectWithValue(error.response?.data || "An error occurred");
         }
@@ -80,7 +85,7 @@ export const updateCustomer = createAsyncThunk(
     async (customerData, { rejectWithValue, fulfillWithValue }) => {
         try {
             const {data} = await api.put(
-                `/customer/customer-update/${customerData.userId}`,
+                `/customer-update/${customerData.userId}`,
                 customerData
             );
             return fulfillWithValue(data)
