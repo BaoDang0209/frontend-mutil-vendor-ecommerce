@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changePassword, get_user_infor} from '../../store/reducers/dashboardReducer';
+import { changePassword} from '../../store/reducers/dashboardReducer';
 
 const ChangePassword = () => {
     const dispatch = useDispatch();
-    const { successMessage, errorMessage, loader, userInfor } = useSelector(state => state.dashboard);
+
+    const { userInfo } = useSelector(state => state.auth);
+    const { successMessage, errorMessage, loader} = useSelector(state => state.dashboard);
     
     const [formData, setFormData] = useState({
         currentPassword: '',
@@ -12,17 +14,7 @@ const ChangePassword = () => {
         confirmPassword: ''
     });
 
-    const [userId, setUserId] = useState(null);
-
-    useEffect(() => {
-        const id = localStorage.getItem('id');
-        if (id && !userInfor) {
-            dispatch(get_user_infor(id));
-            setUserId(id); 
-        } else if (userInfor?.id) {
-            setUserId(userInfor.id); 
-        }
-    }, [dispatch, userInfor]);
+    const userId = userInfo?.id;
 
     const handleChange = (e) => {
         setFormData({

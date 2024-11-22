@@ -45,7 +45,7 @@ export const get_user_infor = createAsyncThunk(
 
 export const changePassword = createAsyncThunk(
     'dashboard/change-password',
-    async ({userId, currentPassword, newPassword, confirmPassword }, { rejectWithValue,fulfillWithValue }) => {
+    async ({ id, currentPassword, newPassword, confirmPassword }, { rejectWithValue, fulfillWithValue }) => {
         try {
             const token = localStorage.getItem('customerToken');
             
@@ -56,8 +56,8 @@ export const changePassword = createAsyncThunk(
             const decodedToken = jwtDecode(token);
             console.log("Decoded Token:", decodedToken);
             
-            if (!userId) {
-                throw new Error("Invalid token: User ID not found");
+            if (!id) {
+                throw new Error("User ID is required to change password.");
             }
 
             const config = {
@@ -67,7 +67,7 @@ export const changePassword = createAsyncThunk(
             };
 
             // Include the user ID in the API call
-            const { data } = await api.put(`/update-password/${userId}`, {
+            const { data } = await api.put(`/update-password/${id}`, {
                 currentPassword,
                 newPassword,
                 confirmPassword
@@ -79,6 +79,7 @@ export const changePassword = createAsyncThunk(
         }
     }
 );
+
 
 export const updateCustomer = createAsyncThunk(
     'dashboard/updateCustomer',
