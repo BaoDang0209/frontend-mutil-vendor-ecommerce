@@ -5,6 +5,7 @@ import Categorys from '../components/Categorys';
 import FeatureProducts from '../components/products/FeatureProducts';
 import Products from '../components/products/Products';
 import Footer from '../components/Footer';
+import ChatBot from '../components/Chatbot';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_products } from '../store/reducers/homeReducer';
 
@@ -39,6 +40,8 @@ const Home = () => {
             <div className='overflow-hidden'>
                 <Products title='Discount Product' products={discount_product}/>
             </div>
+
+            <ChatBot/>
 
                     </div> 
                 </div> 
