@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changePassword, get_user_infor} from '../../store/reducers/dashboardReducer';
+import { changePassword} from '../../store/reducers/dashboardReducer';
 
 const ChangePassword = () => {
     const dispatch = useDispatch();
-    const { successMessage, errorMessage, loader, userInfor } = useSelector(state => state.dashboard);
+
+    const { userInfo } = useSelector(state => state.auth);
+    const { successMessage, errorMessage, loader } = useSelector(state => state.dashboard);
     
     const [formData, setFormData] = useState({
         currentPassword: '',
         newPassword: '',
         confirmPassword: ''
     });
+
+    // Extract user ID from userInfo
+    const userId = userInfo?.id;
 
     const handleChange = (e) => {
         setFormData({
@@ -19,26 +24,18 @@ const ChangePassword = () => {
         });
     };
 
-    useEffect(() => {
-        if (!userInfor) {
-            const id = localStorage.getItem('id');
-            if (id) {
-                dispatch(get_user_infor(id));
-            }
-        }
-    }, [dispatch, userInfor]);
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (userInfor?.id) {
+        if (userId) {
             dispatch(changePassword({ 
-                id: userInfor.id, 
+                id: userId, // Pass id correctly
                 ...formData 
             }));
         } else {
-            console.error("User ID is required to change password.");
+            console.error("");
         }
     };
+
 
     return (
         <div className='p-4 bg-white'>
