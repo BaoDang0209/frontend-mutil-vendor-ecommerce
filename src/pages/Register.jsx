@@ -124,7 +124,7 @@ const Register = () => {
             </div> 
 
         <div className='w-full h-full py-4 pr-4'>
-            <img src="http://localhost:3000/images/register.webp" alt="" />
+            <img src="/images/register.webp" alt="" />
          </div>    
 
          </div>
