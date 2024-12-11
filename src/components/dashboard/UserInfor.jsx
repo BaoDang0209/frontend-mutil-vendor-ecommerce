@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { get_user_infor } from '../../store/reducers/dashboardReducer';
+import { updateCustomer, get_user_infor } from '../../store/reducers/dashboardReducer';
 import { FaPen } from 'react-icons/fa'; // Import pen icon
 
 const UserInfor = () => {
     const dispatch = useDispatch();
-    const { userInfor, loader, errorMessage } = useSelector(state => state.dashboard);
-    const userId = useSelector((state) => state.auth.userInfo?.id);
 
-    const [updateMode, setUpdateMode] = useState(false);
+    const { userInfo } = useSelector((state) => state.auth); // Get user info from auth state
+    const { userInfor, successMessage, errorMessage, loader } = useSelector((state) => state.dashboard);
+    const customer = userInfor?.customer;
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -16,31 +17,33 @@ const UserInfor = () => {
         phoneNumber: '',
         image: ''
     });
+    const [updateMode, setUpdateMode] = useState(false);
+
+    const userId = userInfo?.id;
 
     useEffect(() => {
         if (userId) {
-            dispatch(get_user_infor(userId));
+            dispatch(get_user_infor(userId)); // Fetch user data using userId
         }
     }, [userId, dispatch]);
 
     useEffect(() => {
-        if (userInfor?.customer) {
+        if (customer) {
             setFormData({
-                name: userInfor.customer.name || '',
-                email: userInfor.customer.email || '',
-                address: userInfor.customer.address || '',
-                phoneNumber: userInfor.customer.phoneNumber || '',
-                image: userInfor.customer.image || 'default-avatar.png'
+                name: customer.name || '',
+                email: customer.email || '',
+                address: customer.address || '',
+                phoneNumber: customer.phoneNumber || '',
+                image: customer.image || 'default-avatar.png'
             });
         }
-    }, [userInfor]);
+    }, [customer]);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value
-        }));
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
     };
 
     const handleImageChange = (e) => {
@@ -50,7 +53,7 @@ const UserInfor = () => {
             reader.onload = () => {
                 setFormData((prevData) => ({
                     ...prevData,
-                    image: reader.result // Set the image preview
+                    image: reader.result // Base64 string of the image
                 }));
             };
             reader.readAsDataURL(file);
@@ -62,12 +65,28 @@ const UserInfor = () => {
     };
 
     const handleSave = () => {
-        console.log("Updated data:", formData);
+        if (!userId) {
+            console.error("User ID is missing. Cannot update user.");
+            return;
+        }
+
+        dispatch(
+            updateCustomer({
+                id: userId,
+                name: formData.name,
+                email: formData.email,
+                address: formData.address,
+                phoneNumber: formData.phoneNumber,
+                image: formData.image
+            })
+        );
+
         setUpdateMode(false);
     };
 
     if (loader) return <p className="text-center text-slate-600 mt-20 text-lg">Loading...</p>;
     if (errorMessage) return <p className="text-center text-red-600 mt-20 text-lg">{errorMessage}</p>;
+    if (successMessage) return <p className="text-center text-green-600 mt-20 text-lg">{successMessage}</p>;
 
     return (
         <div className="p-6 bg-gradient-to-br from-white to-gray-50 shadow-xl rounded-lg max-w-xl mx-auto">

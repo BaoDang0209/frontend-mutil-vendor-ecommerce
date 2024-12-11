@@ -14,6 +14,49 @@ export const get_dashboard_index_data = createAsyncThunk(
         }
     }
 )
+
+export const updateCustomer = createAsyncThunk(
+    'dashboard/updateCustomer',
+    async ({ id, name, address, phoneNumber, gender, image }, { rejectWithValue, fulfillWithValue }) => {
+        try {
+            const token = localStorage.getItem('customerToken');
+            
+            if (!token) {
+                throw new Error("No token found");
+            }
+
+            const decodedToken = jwtDecode(token);
+            console.log("Decoded Token:", decodedToken);
+            
+            if (!id) {
+                throw new Error("User ID is required to change password.");
+            }
+
+            const config = {
+                headers: {
+                    Authorization: `Bearer ${token}` 
+                }
+            };
+
+            const { data } = await api.put(
+                `/customer-update/${id}`, 
+                {
+                    name,
+                    address,
+                    phoneNumber,
+                    gender,
+                    image
+                }, 
+                config
+            );
+
+            return fulfillWithValue(data);
+        } catch (error) {
+            return rejectWithValue(error.response?.data || "Failed to update customer");
+        }
+    }
+);
+
 export const get_user_infor = createAsyncThunk(
     'dashboard/get_user_infor',
     async (userId, { rejectWithValue, fulfillWithValue }) => {
@@ -23,9 +66,6 @@ export const get_user_infor = createAsyncThunk(
             if (!token) {
                 throw new Error("No token found");
             }
-            
-            const decodedToken = jwtDecode(token);
-            console.log("Decoded Token:", decodedToken);
 
             const config = {
                 headers: {
@@ -113,7 +153,7 @@ export const dashboardReducer = createSlice({
         .addCase(get_user_infor.fulfilled, (state, { payload }) => {
             state.userInfor = payload;
             state.loader = false;
-            state.successMessage = "User information loaded successfully.";
+            state.successMessage = "";
         })
 
         .addCase(get_dashboard_index_data.pending, (state) => {
@@ -129,6 +169,19 @@ export const dashboardReducer = createSlice({
         .addCase(get_dashboard_index_data.rejected, (state, { payload }) => {
             state.errorMessage = payload?.error || "Failed to load dashboard data";
             state.loader = false;
+        })
+        .addCase(updateCustomer.pending, (state) => {
+            state.loader = true;
+            state.errorMessage = "";
+            state.successMessage = "";
+        })
+        .addCase(updateCustomer.fulfilled, (state, { payload }) => {
+            state.loader = false;
+            state.successMessage = "User updated successfully";
+        })
+        .addCase(updateCustomer.rejected, (state, { payload }) => {
+            state.loader = false;
+            state.errorMessage = typeof payload === 'object' ? JSON.stringify(payload) : payload || "Failed to update user";
         })
         .addCase(changePassword.pending, (state) => {
             state.loader = true;
